@@ -3,7 +3,7 @@ secrets:
     file: ${HOME}/.npmrc
 
 services:
-  cuesoft-website:
+  cueprise-website:
     image: cuesoftcloud/cueprise-website
     build:
       context: .
