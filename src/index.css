@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my-container {
+  @apply w-[90%] mx-auto;
+}
+
+.btn {
+  @apply w-40 rounded-md bg-bgPrimary text-white py-3 px-5 text-center;
+}
+
+.btn-dark {
+  @apply w-40 rounded-md bg-bgPrimary bg-opacity-20 text-bgPrimary py-3 px-5 text-center;
+}
