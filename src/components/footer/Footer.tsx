@@ -4,7 +4,10 @@ import CuepriseLogoWhite from "../../assets/logos/cueprise-logo-white.svg";
 
 export const Footer = () => {
   return (
-    <footer className="py-20 px-40 bg-[#2E213D] min-h-[425px] flex items-center justify-between bg-footerBgLine bg-contain bg-left-bottom">
+    <footer
+      data-testid="footer"
+      className="py-20 px-40 bg-[#2E213D] min-h-[425px] flex items-center justify-between bg-footerBgLine bg-contain bg-left-bottom"
+    >
       <div className="">
         <img
           src={CuepriseLogoWhite}

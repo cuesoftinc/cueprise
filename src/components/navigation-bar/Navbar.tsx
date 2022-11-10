@@ -6,7 +6,10 @@ import NavEllipse from "../../assets/vectors/nav-ellipse.svg";
 export const Navbar = () => {
   return (
     // <div>
-    <nav className="py-12 flex my-container w-full justify-between items-center">
+    <nav
+      data-testid="navbar"
+      className="py-12 flex my-container w-full justify-between items-center"
+    >
       <img
         src={CuepriseLogo}
         alt="The logo of the cueprise franchise"
