@@ -12,3 +12,23 @@ test("renders homepage", () => {
   const homepage = screen.getByTestId("homepage");
   expect(homepage).toBeInTheDocument();
 });
+
+test("renders navigation bar", () => {
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
+  const navbar = screen.getByTestId("navbar");
+  expect(navbar).toBeInTheDocument();
+});
+
+test("renders footer", () => {
+  render(
+    <MemoryRouter>
+      <App />
+    </MemoryRouter>
+  );
+  const footer = screen.getByTestId("footer");
+  expect(footer).toBeInTheDocument();
+});

@@ -2,23 +2,21 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
+import { Footer } from "./components/footer/Footer";
+import { Navbar } from "./components/navigation-bar/Navbar";
 
-const Home = () => {
-  return (
-    <div data-testid="homepage">
-      <h1>Hello</h1>
-    </div>
-  );
-};
+import { Homepage } from "./pages/Homepage";
 
 function App() {
   return (
-    <div className="font-poppins dark:bg-darkModeBg dark:text-white">
+    <div className="font-inter dark:bg-darkModeBg dark:text-white">
+      <Navbar />
       <Routes>
         <>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Homepage />} />
         </>
       </Routes>
+      <Footer />
     </div>
   );
 }
