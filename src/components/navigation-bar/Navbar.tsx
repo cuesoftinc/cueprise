@@ -8,7 +8,7 @@ export const Navbar = () => {
     // <div>
     <nav
       data-testid="navbar"
-      className="py-12 flex my-container w-full justify-between items-center"
+      className="py-6 flex my-container w-full justify-between items-center"
     >
       <img
         src={CuepriseLogo}
