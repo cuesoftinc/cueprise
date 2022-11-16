@@ -13,3 +13,27 @@
 .btn-dark {
   @apply w-40 rounded-md bg-bgPrimary bg-opacity-20 text-bgPrimary py-3 px-5 text-center;
 }
+
+/* .toggle-bg:after {
+  content: "";
+  @apply absolute bg-yellow-800 border rounded-full h-6 w-6 top-1 left-6 transition shadow-sm p-3;
+} */
+
+.toggle-bg:before {
+  content: "";
+  @apply absolute border bg-[#F7795B] rounded-full h-[29px] w-[29px] top-1 left-1 transition shadow-sm p-3;
+}
+
+input:checked + .toggle-bg:before {
+  transform: translateX(150%);
+  /* @apply border-green-800; */
+}
+
+/* input + .toggle-bg:after {
+  transform: translateX(150%);
+  @apply border-slate-800;
+} */
+
+input:checked + .toggle-bg {
+  @apply bg-[#f7795b0d];
+}
