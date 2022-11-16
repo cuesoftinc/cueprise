@@ -45,7 +45,6 @@ export const Homepage = () => {
 
   const handleClick = () => {
     setMChecked((prev) => !prev);
-    console.log(mChecked);
   };
   return (
     <main data-testid="homepage">
