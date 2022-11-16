@@ -33,6 +33,13 @@ import CheckIconActive from "../assets/icons/check-icon-active.svg";
 import CheckIconInactiveHover from "../assets/icons/check-icon-inactive-hover.svg";
 import CheckIconInactive from "../assets/icons/check-icon-inactive.svg";
 
+import PricingStar from "../assets/icons/star-icon.svg";
+import RedStarGroup from "../assets/others/star-group-red.svg";
+import QuotesIcon from "../assets/icons/quotes-white.svg";
+
+import StarRatingActive from "../assets/icons/star-rating-active.svg";
+import StarRatingInactive from "../assets/icons/star-rating-inactive.svg";
+
 export const Homepage = () => {
   const [mChecked, setMChecked] = useState(false);
 
@@ -282,12 +289,12 @@ export const Homepage = () => {
       </section>
 
       <section className="bg-pricingWavyBg">
-        <div className="my-container py-20">
+        <div className="my-container py-32">
           <div>
             <h3 className="text-[36px] text-textPrimary font-bold text-center">
               Our Pricing
             </h3>
-            <p className="text-[16px] font-medium w-[80%] text-center mx-auto mt-8">
+            <p className="text-[16px] text-[#64748B] font-medium w-[80%] text-center mx-auto mt-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget at
               risus lorem nec eu libero elementum. Orci, sed laoreet cursus
               lobortis auctor nulla lobortis viverra. Lobortis fusce ac magnis
@@ -296,7 +303,9 @@ export const Homepage = () => {
           </div>
           <div>
             <div className="flex justify-center items-center mt-28 gap-10">
-              <span>Monthly Billing</span>
+              <span className="text-[16px] text-[#475569]">
+                Monthly Billing
+              </span>
               <label
                 htmlFor="theme-toggle"
                 className="flex items-center cursor-pointer relative "
@@ -311,11 +320,12 @@ export const Homepage = () => {
                   }`}
                 ></div>
               </label>
-              <span>Annual Biling</span>
+              <span className="text-[16px] text-[#94A3B8]">Annual Biling</span>
             </div>
           </div>
-          <div className="mt-20 flex flex-wrap justify-between">
-            <div className="w-[30%] bg-[#56436C] rounded-2xl py-10 px-8 shadow-[0_10px_56px_#0000000d]">
+
+          <div className="mt-20 flex flex-wrap justify-center gap-12">
+            <div className="w-[30%] bg-[#56436C] rounded-2xl py-10 px-4 shadow-[0_10px_56px_#0000000d]">
               <div className="text-center ">
                 <span className="text-[32px] font-extrabold text-[#F1F5F9]">
                   FREE
@@ -324,13 +334,13 @@ export const Homepage = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
                   sit.
                 </p>
-                <div className="flex items-center justify-center mt-6">
+                <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[56px] text-bgPrimary font-bold">
                     $0
                   </span>
                   <span className="text-[#64748B] font-semibold text-[16px]">
                     {" "}
-                    Users/Month
+                    /Users/Month
                   </span>
                 </div>
                 <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6">
@@ -338,15 +348,13 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-10 text-[14px] text-[#F1F5F9]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span className="text-semibold text-[#F1F5F9]">
-                    Mobile Platform
-                  </span>
+                  <span className="text-semibold">Mobile Platform</span>
                 </div>
 
                 <div className="flex items-center gap-4 mt-8">
@@ -354,7 +362,7 @@ export const Homepage = () => {
                     src={CheckIconInactiveHover}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span className="text-semibold text-[#F1F5F9] line-through">
+                  <span className="text-semibold line-through">
                     {" "}
                     Web & Desktop
                   </span>
@@ -365,7 +373,7 @@ export const Homepage = () => {
                     src={CheckIconInactiveHover}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span className="text-semibold text-[#F1F5F9] line-through">
+                  <span className="text-semibold line-through">
                     Pay bills and salary directly on the platform{" "}
                   </span>
                 </div>
@@ -375,7 +383,7 @@ export const Homepage = () => {
                     src={CheckIconInactiveHover}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span className="text-semibold text-[#F1F5F9] line-through">
+                  <span className="text-semibold line-through">
                     Login to view assigned tasks
                   </span>
                 </div>
@@ -385,7 +393,7 @@ export const Homepage = () => {
                     src={CheckIconInactiveHover}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span className="text-semibold text-[#F1F5F9] line-through">
+                  <span className="text-semibold line-through">
                     Request Leave
                   </span>
                 </div>
@@ -395,14 +403,14 @@ export const Homepage = () => {
                     src={CheckIconInactiveHover}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span className="text-semibold text-[#F1F5F9] line-through">
+                  <span className="text-semibold line-through">
                     Access to complete features
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="w-[30%] rounded-2xl py-10 px-8 bg-white shadow-[0_10px_56px_#0000000d]">
+            <div className="w-[30%] rounded-2xl py-10 px-4 bg-white shadow-[0_10px_56px_#0000000d]">
               <div className="text-center ">
                 <span className="text-[32px] font-extrabold text-[#475569]">
                   BASIC
@@ -411,13 +419,13 @@ export const Homepage = () => {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
                   sit.
                 </p>
-                <div className="flex items-center justify-center mt-6">
+                <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[56px] text-bgPrimary font-bold">
-                    $0
+                    $5
                   </span>
                   <span className="text-[#64748B] font-semibold text-[16px]">
                     {" "}
-                    Users/Month
+                    /Users/Month
                   </span>
                 </div>
                 <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6">
@@ -425,7 +433,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[#475569]">
+              <div className="mt-10 text-[#475569] text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
@@ -480,22 +488,22 @@ export const Homepage = () => {
               </div>
             </div>
 
-            <div className="w-[30%] rounded-2xl py-10 px-8 bg-white shadow-[0_10px_56px_#0000000d]">
+            <div className="w-[30%] rounded-2xl py-10 px-4 bg-white shadow-[0_10px_56px_#0000000d]">
               <div className="text-center ">
                 <span className="text-[32px] font-extrabold text-[#475569]">
-                  BASIC
+                  STANDARD
                 </span>
                 <p className="text-[16px] text-[#969696] mt-6">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
                   sit.
                 </p>
-                <div className="flex items-center justify-center mt-6">
+                <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[56px] text-bgPrimary font-bold">
-                    $0
+                    $10
                   </span>
                   <span className="text-[#64748B] font-semibold text-[16px]">
                     {" "}
-                    Users/Month
+                    /Users/Month
                   </span>
                 </div>
                 <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6">
@@ -503,7 +511,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[#475569]">
+              <div className="mt-10 text-[#475569] text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
@@ -517,13 +525,7 @@ export const Homepage = () => {
                     src={CheckIconActive}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span
-                    className="text-semibold
-                                    "
-                  >
-                    {" "}
-                    Mobile, Web & Desktop
-                  </span>
+                  <span className="text-semibold"> Mobile, Web & Desktop</span>
                 </div>
 
                 <div className="flex items-center gap-4 mt-8">
@@ -544,10 +546,10 @@ export const Homepage = () => {
 
                 <div className="flex items-center gap-4 mt-8">
                   <img
-                    src={CheckIconInactive}
+                    src={CheckIconActive}
                     alt="check circle icon that serves as bullet"
                   />
-                  <span className="text-semibold line-through">
+                  <span className="text-semibold">
                     Pay bills and salary directly on the platform{" "}
                   </span>
                 </div>
@@ -561,6 +563,200 @@ export const Homepage = () => {
                     Access to complete features
                   </span>
                 </div>
+              </div>
+            </div>
+
+            <div className="w-[30%] rounded-2xl py-10 px-4 bg-white shadow-[0_10px_56px_#0000000d] relative">
+              <div className="absolute -top-2 -right-2">
+                <img src={PricingStar} alt="a star icon" />
+              </div>
+
+              <div className="text-center ">
+                <span className="text-[32px] font-extrabold text-[#475569]">
+                  PRO
+                </span>
+                <p className="text-[16px] text-[#969696] mt-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
+                  sit.
+                </p>
+                <div className="flex items-baseline justify-center mt-6">
+                  <span className="text-[56px] text-bgPrimary font-bold">
+                    $20
+                  </span>
+                  <span className="text-[#64748B] font-semibold text-[16px]">
+                    {" "}
+                    /Month
+                  </span>
+                </div>
+                <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6">
+                  Select Plan
+                </button>
+              </div>
+
+              <div className="mt-10 text-[#475569] text-[14px]">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">Hassle Free</span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold"> Mobile, Web & Desktop</span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">View assigned tasks</span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">Request Leave</span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">
+                    Pay bills and salary directly on the platform{" "}
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">
+                    Access to complete features
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[30%] rounded-2xl py-10 px-4 bg-white shadow-[0_10px_56px_#0000000d] relative">
+              <div className="absolute -top-2 -right-2">
+                <img src={PricingStar} alt="a star icon" />
+              </div>
+
+              <div className="text-center ">
+                <span className="text-[32px] font-extrabold text-[#475569]">
+                  ENTERPRISE
+                </span>
+                <p className="text-[16px] text-[#969696] mt-6">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
+                  sit.
+                </p>
+                <div className="flex items-baseline justify-center mt-6">
+                  <span className="text-[56px] text-bgPrimary font-bold">
+                    $*****
+                  </span>
+                  <span className="text-[#64748B] font-semibold text-[16px]">
+                    {" "}
+                    /Month
+                  </span>
+                </div>
+                <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6">
+                  Select Plan
+                </button>
+              </div>
+
+              <div className="mt-10 text-[#475569] text-[14px]">
+                <div className="flex items-center gap-4">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">
+                    Customer Servers + Databases
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">
+                    Purchase 1 Year Renewable License
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">Mobile, Desktop & Web</span>
+                </div>
+
+                <div className="flex items-center gap-4 mt-8">
+                  <img
+                    src={CheckIconActive}
+                    alt="check circle icon that serves as bullet"
+                  />
+                  <span className="text-semibold">
+                    Access to complete features
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="flex items-center md:min-h-screen">
+        <div className="my-container">
+          <div className="relative text-center w-full">
+            <h3 className="text-[#475569] text-[32px] font-semibold">
+              What our users are saying about Cueprise
+            </h3>
+            <p className="text-[14px] text-[#64748B] w-[70%] mx-auto mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis
+              proin est sed nunc non sed odio odio. Cursus turpis aliquam neque
+              varius sed.
+            </p>
+
+            <div className="absolute right-0 -top-10">
+              <img src={RedStarGroup} alt="A group of stars" />
+            </div>
+          </div>
+
+          <div className="flex gap-8">
+            <div className="w-[33%] border border-[#EDEDED] pt-12 px-8 relative">
+              <div className="w-[54px] h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute -top-8 left-10">
+                <img src={QuotesIcon} alt="A quotation mark icon" />
+              </div>
+              <div>
+                <div className="flex">
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img
+                    src={StarRatingInactive}
+                    alt="An inactive rating start"
+                  />
+                </div>
+                <p className="text-[16px] text-[#797979] mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque tristique tellus nisi feugiat porttitor. At
+                  potenti vel id.
+                </p>
               </div>
             </div>
           </div>
