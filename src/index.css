@@ -13,3 +13,16 @@
 .btn-dark {
   @apply w-40 rounded-md bg-bgPrimary bg-opacity-20 text-bgPrimary py-3 px-5 text-center;
 }
+
+.toggle-bg:before {
+  content: "";
+  @apply absolute border bg-[#F7795B] rounded-full h-[29px] w-[29px] top-1 left-1 transition shadow-sm p-3;
+}
+
+input:checked + .toggle-bg:before {
+  transform: translateX(150%);
+}
+
+input:checked + .toggle-bg {
+  @apply bg-[#f7795b0d];
+}
