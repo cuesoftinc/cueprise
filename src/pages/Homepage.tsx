@@ -7,7 +7,7 @@ import HeroTwistRight from "../assets/vectors/hero-twist-vector-right.svg";
 import HeroCrown from "../assets/vectors/hero-crown-vector.svg";
 import HeroPlayIcon from "../assets/icons/hero-play-demo-icon.svg";
 import HeroGetStartedArrowIcon from "../assets/icons/hero-get-started-arrow-icon.svg";
-import CuepriseScreenLaptop from "../assets/imgs/cueprise-laptop-screen-img.jpg";
+import CuepriseScreenLaptop from "../assets/imgs/cueprise-laptop-screen-img.png";
 import PersonelOverviewScreen from "../assets/imgs/personel-overview-screen-img.svg";
 
 import Umobile from "../assets/logos/umobile.svg";
@@ -39,6 +39,11 @@ import QuotesIcon from "../assets/icons/quotes-white.svg";
 
 import StarRatingActive from "../assets/icons/star-rating-active.svg";
 import StarRatingInactive from "../assets/icons/star-rating-inactive.svg";
+
+import AyAvatar from "../assets/imgs/ay-avatar.svg";
+
+import NewsletterBig from "../assets/others/newsletter-subscribe-large-bg.svg";
+import NewsletterSmall from "../assets/others/newsletter-subscribe-small-mask.svg";
 
 export const Homepage = () => {
   const [mChecked, setMChecked] = useState(false);
@@ -127,47 +132,49 @@ export const Homepage = () => {
       <section className="my-8 relative">
         {/* <div className="bg-[#F1F5F9] bg-opacity-100 w-screen h-[0px] absolute bottom-[30%] shadow-[0_0_700px_140px_#F1F5F9]"></div> */}
 
-        <div className="my-container flex justify-between">
-          <img src={CuepriseScreenLaptop} alt="" />
-          <img src={PersonelOverviewScreen} alt="" />
-        </div>
+        <div className="bg-screenSectionBg bg-center">
+          <div className="my-container flex justify-between">
+            <img src={CuepriseScreenLaptop} alt="" />
+            <img src={PersonelOverviewScreen} alt="" />
+          </div>
 
-        <div>
-          <div className="my-container text-center my-32">
-            <h3 className="text-[32px] text-textHeader font-bold">
-              Trusted by reputable companies
-            </h3>
-            <div className="flex justify-around items-center min-h-full py-12">
-              <div>
-                <img
-                  src={Umobile}
-                  alt="Umobile Logo"
-                  className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
-                />
-              </div>
+          <div>
+            <div className="my-container text-center my-32">
+              <h3 className="text-[32px] text-textHeader font-bold">
+                Trusted by reputable companies
+              </h3>
+              <div className="flex justify-around items-center min-h-full py-12">
+                <div>
+                  <img
+                    src={Umobile}
+                    alt="Umobile Logo"
+                    className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
+                  />
+                </div>
 
-              <div>
-                <img
-                  src={Finchglow}
-                  alt="Finchglow Logo"
-                  className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
-                />
-              </div>
+                <div>
+                  <img
+                    src={Finchglow}
+                    alt="Finchglow Logo"
+                    className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
+                  />
+                </div>
 
-              <div>
-                <img
-                  src={Sycamore}
-                  alt="Sycamore Logo"
-                  className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
-                />
-              </div>
+                <div>
+                  <img
+                    src={Sycamore}
+                    alt="Sycamore Logo"
+                    className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
+                  />
+                </div>
 
-              <div>
-                <img
-                  src={Umobile}
-                  alt="Umobile Logo"
-                  className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
-                />
+                <div>
+                  <img
+                    src={Umobile}
+                    alt="Umobile Logo"
+                    className="w-[60px] h-[30px] lg:w-[150px] lg:h-[90px]"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -718,8 +725,11 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section id="reviews" className="flex items-center md:min-h-screen">
-        <div className="my-container">
+      <section
+        id="reviews"
+        className="flex items-center md:min-h-screen bg-[#FDF7F6] bg-opacity-[44%]"
+      >
+        <div className="my-container py-24">
           <div className="relative text-center w-full">
             <h3 className="text-[#475569] text-[32px] font-semibold">
               What our users are saying about Cueprise
@@ -735,12 +745,44 @@ export const Homepage = () => {
             </div>
           </div>
 
-          <div className="flex gap-8">
-            <div className="w-[33%] border border-[#EDEDED] pt-12 px-8 relative">
-              <div className="w-[54px] h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute -top-8 left-10">
+          <div className="flex gap-4 py-20 w-full overflow-hidden">
+            <div className=" min-w-[375px] border border-[#EDEDED] relative">
+              <div className="w-[54px] h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute -top-8 left-5">
                 <img src={QuotesIcon} alt="A quotation mark icon" />
               </div>
-              <div>
+              <div className="pt-12 px-8">
+                <div className="flex">
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An inactive rating start" />
+                </div>
+                <p className="text-[16px] text-[#797979] mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque tristique tellus nisi feugiat porttitor. At
+                  potenti vel id.
+                </p>
+              </div>
+              <div className="border-t flex items-center px-8 mt-4 py-4 gap-6">
+                <img src={AyAvatar} alt="An avatar for the reviewer" />
+
+                <div className="flex flex-col justify-between">
+                  <span className="text-[14px] text-[#64748B] font-semibold">
+                    Owoetoni Ayodele
+                  </span>
+                  <span className="text-[14px] text-[#94A3B8]">
+                    Product Designer
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className=" min-w-[375px] border border-[#EDEDED] relative">
+              <div className="w-[54px] h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute -top-8 left-5">
+                <img src={QuotesIcon} alt="A quotation mark icon" />
+              </div>
+              <div className="pt-12 px-8">
                 <div className="flex">
                   <img src={StarRatingActive} alt="An active rating start" />
                   <img src={StarRatingActive} alt="An active rating start" />
@@ -757,6 +799,125 @@ export const Homepage = () => {
                   potenti vel id.
                 </p>
               </div>
+              <div className="border-t flex items-center px-8 mt-4 py-4 gap-6">
+                <img src={AyAvatar} alt="An avatar for the reviewer" />
+
+                <div className="flex flex-col justify-between">
+                  <span className="text-[14px] text-[#64748B] font-semibold">
+                    Owoetoni Ayodele
+                  </span>
+                  <span className="text-[14px] text-[#94A3B8]">
+                    Product Designer
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className=" min-w-[375px] border border-[#EDEDED] relative">
+              <div className="w-[54px] h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute -top-8 left-5">
+                <img src={QuotesIcon} alt="A quotation mark icon" />
+              </div>
+              <div className="pt-12 px-8">
+                <div className="flex">
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingInactive} alt="An active rating start" />
+                  <img
+                    src={StarRatingInactive}
+                    alt="An inactive rating start"
+                  />
+                </div>
+                <p className="text-[16px] text-[#797979] mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque tristique tellus nisi feugiat porttitor. At
+                  potenti vel id.
+                </p>
+              </div>
+              <div className="border-t flex items-center px-8 mt-4 py-4 gap-6">
+                <img src={AyAvatar} alt="An avatar for the reviewer" />
+
+                <div className="flex flex-col justify-between">
+                  <span className="text-[14px] text-[#64748B] font-semibold">
+                    Owoetoni Ayodele
+                  </span>
+                  <span className="text-[14px] text-[#94A3B8]">
+                    Product Designer
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className=" min-w-[375px] border border-[#EDEDED] relative">
+              <div className="w-[54px] h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute -top-8 left-5">
+                <img src={QuotesIcon} alt="A quotation mark icon" />
+              </div>
+              <div className="pt-12 px-8">
+                <div className="flex">
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingActive} alt="An active rating start" />
+                  <img src={StarRatingInactive} alt="An active rating start" />
+                  <img src={StarRatingInactive} alt="An active rating start" />
+                  <img
+                    src={StarRatingInactive}
+                    alt="An inactive rating start"
+                  />
+                </div>
+                <p className="text-[16px] text-[#797979] mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Pellentesque tristique tellus nisi feugiat porttitor. At
+                  potenti vel id.
+                </p>
+              </div>
+              <div className="border-t flex items-center px-8 mt-4 py-4 gap-6">
+                <img src={AyAvatar} alt="An avatar for the reviewer" />
+
+                <div className="flex flex-col justify-between">
+                  <span className="text-[14px] text-[#64748B] font-semibold">
+                    Owoetoni Ayodele
+                  </span>
+                  <span className="text-[14px] text-[#94A3B8]">
+                    Product Designer
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="min-h-screen">
+        <div className="bg-[#B888F1] bg-[length:100%_50vh] bg-opacity-[12%]">
+          <div className="my-container flex items-center justify-end min-h-screen relative">
+            <div className="bg-[#634D7C] border-none rounded-[15px] absolute left-0">
+              <div className="relative">
+                <img src={NewsletterSmall} alt="Another pattern design" />
+                <div className="absolute top-0 left-0 w-full h-full p-8">
+                  <div className="flex flex-col gap-4">
+                    <span className="text-[16px] text-white">
+                      SUBSCRIBE TO OUR NEWSLETTER
+                    </span>
+                    <p className="text-[32px] w-[80%] text-white">
+                      Get exciting updates about Cueprise and Productivity.
+                    </p>
+
+                    <div className="mt-4">
+                      <input
+                        type="text"
+                        placeholder="YOUR EMAIL ADDRESS"
+                        className="py-4 px-6 placeholder:text-[#1B1C31] placeholder:opacity-40 text-[14px] w-[70%] bg-white bg-opacity-60 rounded-l-lg focus:outline-none"
+                      />
+                      <button className="text-[14px] text-white bg-bgPrimary text-center py-4 px-6 rounded-r-lg">
+                        SUBSCRIBE
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <img src={NewsletterBig} alt="A pattern design" />
             </div>
           </div>
         </div>
