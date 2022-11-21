@@ -935,7 +935,7 @@ export const Homepage = () => {
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
                   <img
-                    src={StarRatingActive}
+                    src={StarRatingInactive}
                     alt="An inactive rating start"
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
@@ -990,12 +990,12 @@ export const Homepage = () => {
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
                   <img
-                    src={StarRatingActive}
+                    src={StarRatingInactive}
                     alt="An active rating start"
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
                   <img
-                    src={StarRatingActive}
+                    src={StarRatingInactive}
                     alt="An inactive rating start"
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
@@ -1045,17 +1045,17 @@ export const Homepage = () => {
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
                   <img
-                    src={StarRatingActive}
+                    src={StarRatingInactive}
                     alt="An active rating start"
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
                   <img
-                    src={StarRatingActive}
+                    src={StarRatingInactive}
                     alt="An active rating start"
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
                   <img
-                    src={StarRatingActive}
+                    src={StarRatingInactive}
                     alt="An inactive rating start"
                     className="w-[9px] h-[9px] lg:w-[17px] lg:h-[17px]"
                   />
