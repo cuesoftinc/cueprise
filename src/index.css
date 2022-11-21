@@ -7,11 +7,11 @@
 }
 
 .btn {
-  @apply w-40 rounded-md bg-bgPrimary text-white py-3 px-5 text-center;
+  @apply w-32 lg:w-40 rounded-md bg-bgPrimary text-white lg:py-3 lg:px-5 py-2 px-2 text-center;
 }
 
 .btn-dark {
-  @apply w-40 rounded-md bg-bgPrimary bg-opacity-20 text-bgPrimary py-3 px-5 text-center;
+  @apply w-32 lg:w-40 rounded-md bg-bgPrimary bg-opacity-20 text-bgPrimary lg:py-3 lg:px-5 py-2 px-2 text-center;
 }
 
 .toggle-bg:before {
@@ -25,4 +25,52 @@ input:checked + .toggle-bg:before {
 
 input:checked + .toggle-bg {
   @apply bg-[#f7795b0d];
+}
+
+/* Mobile Hamburger Menu start*/
+
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
