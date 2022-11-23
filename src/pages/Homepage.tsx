@@ -114,10 +114,9 @@ export const Homepage = () => {
           </div>
           <div className=" lg:w-[55%] flex flex-col gap-12 items-center">
             <p className="text-center text-[12px] lg:text-[18px] text-textPrimary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor,
-              odio sagittis, diam tincidunt neque velit nec cras. Et convallis
-              pellentesque et, tellus et feugiat in metus sed. Quis turpis nunc
-              nulla vel facilisi metus. Arcu.
+              Manage your inventory, accept payments, generate transaction
+              reports, pay employees and respond to customer inquiries in one
+              click!.
             </p>
 
             <div className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-8 lg:justify-between">
@@ -128,7 +127,7 @@ export const Homepage = () => {
                   className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px]"
                 />
                 <span className="text-[12px] lg:text-[16px] text-bgPrimary">
-                  Checkout DEMO
+                  Watch A Demo
                 </span>
               </div>
 
@@ -226,9 +225,8 @@ export const Homepage = () => {
                 Inventory
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-                feugiat arcu, non senectus integer. Risus morbi nec varius neque
-                nunc, ut. Justo elementum potenti sed tempor. Egestas duis.
+                Manage your inventory and product stock while you focus on other
+                executive aspects of your business.
               </p>
             </div>
 
@@ -254,9 +252,9 @@ export const Homepage = () => {
                 Payroll
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-                feugiat arcu, non senectus integer. Risus morbi nec varius neque
-                nunc, ut. Justo elementum potenti sed tempor. Egestas duis.
+                Allows your HR department to focus on other aspects of human
+                resource management by relieving them of the burden of employee
+                payment.
               </p>
             </div>
 
@@ -280,13 +278,13 @@ export const Homepage = () => {
       <section className="bg-[#FAF6FF]">
         <div className="lg:flex items-center justify-between pl-[5%] hidden">
           <div className="relative">
-            <div className="w-[70%]">
+            <div className="w-[65%]">
               <span className="font-bold text-[52px] leading-[78px] text-[#0C0047]">
-                Eleifend ac consectetur diam.
+                What makes us different from our competitors?
               </span>
               <p className="text-[14px] text-[#969696] mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sagittis aenean id ut est, in. Cursus in varius cras arcu.{" "}
+                We are a better solution in terms of privacy, local compliance,
+                and data prevention.
               </p>
               <div className="flex mt-4">
                 <div className="w-fit relative flex">
@@ -301,13 +299,13 @@ export const Homepage = () => {
               </div>
               <button className="btn mt-8">Try for free</button>
             </div>
-            <div className="absolute right-[20%] bottom-0">
+            <div className="absolute right-[45%] -bottom-4">
               <img
                 src={TwistLeftVector}
                 alt="a twist like vector for design purposes"
               />
             </div>
-            <div className="absolute -right-[65%] -top-16">
+            <div className="absolute -right-[30%] -top-8">
               <img
                 src={LaptopScreen}
                 alt="A laptop screen showing the product"
@@ -390,13 +388,10 @@ export const Homepage = () => {
         <div className="my-container py-32">
           <div>
             <h3 className="text-[16px] lg:text-[36px] text-textPrimary font-bold text-center">
-              Our Pricing
+              Get Yourself A Cueprise Plan And Level Up!
             </h3>
             <p className="text-[12px] lg:text-[16px] text-[#64748B] font-medium lg:w-[80%] text-center mx-auto mt-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget at
-              risus lorem nec eu libero elementum. Orci, sed laoreet cursus
-              lobortis auctor nulla lobortis viverra. Lobortis fusce ac magnis
-              velit viverra. Id imperdiet orci molestie adipiscing pretium.
+              Spend a quarter as much as you would with our Competitors.
             </p>
           </div>
           <div>
@@ -881,9 +876,9 @@ export const Homepage = () => {
                   />
                 </div>
                 <p className="text-[10px] lg:text-[16px] text-[#797979] mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque tristique tellus nisi feugiat porttitor. At
-                  potenti vel id.
+                  Cueprise has greatly eased my entrepreneurial journey by
+                  assisting with paying the salaries of my employees and
+                  accepting payments from customers
                 </p>
               </div>
               <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
@@ -895,10 +890,10 @@ export const Homepage = () => {
 
                 <div className="flex flex-col justify-between">
                   <span className="text-[8px] lg:text-[14px] text-[#64748B] font-semibold">
-                    Owoetoni Ayodele
+                    Ore Solabomi
                   </span>
                   <span className="text-[8px] lg:text-[14px] text-[#94A3B8]">
-                    Product Designer
+                    CEO, Tames Clothing
                   </span>
                 </div>
               </div>
@@ -941,9 +936,8 @@ export const Homepage = () => {
                   />
                 </div>
                 <p className="text-[10px] lg:text-[16px] text-[#797979] mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque tristique tellus nisi feugiat porttitor. At
-                  potenti vel id.
+                  Cueprise has relieved me of the constant end-of-month hassle
+                  of paying the salaries of my employees.
                 </p>
               </div>
               <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
@@ -955,10 +949,10 @@ export const Homepage = () => {
 
                 <div className="flex flex-col justify-between">
                   <span className="text-[8px] lg:text-[14px] text-[#64748B] font-semibold">
-                    Owoetoni Ayodele
+                    Bola Victor
                   </span>
                   <span className="text-[8px] lg:text-[14px] text-[#94A3B8]">
-                    Product Designer
+                    Human Resource Manager
                   </span>
                 </div>
               </div>
