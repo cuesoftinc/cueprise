@@ -60,7 +60,7 @@ export const Homepage = () => {
       <div className="text-transparent pointer-events-none  w-[10%] h-[100] top-[35%] left-[10%] absolute rounded-full shadow-[0_0_600px_60px_#CDB0EF]"></div>
       <div className="text-transparent pointer-events-none  w-[10%] h-[100] bottom-[35%] right-[5%] absolute rounded-full shadow-[0_0_600px_60px_#CDB0EF]"></div>
 
-      <section className="my-container py-12">
+      <section id="hero" className="my-container py-12">
         <div className="flex justify-between">
           <div className="w-[20%] lg:w-[20%] flex justify-end ">
             <img
@@ -150,7 +150,7 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="my-8 relative">
+      <section id="customer-companies" className="my-8 relative">
         {/* <div className="bg-[#F1F5F9] bg-opacity-100 w-screen h-[0px] absolute bottom-[30%] shadow-[0_0_700px_140px_#F1F5F9]"></div> */}
 
         <div className="lg:bg-screenSectionBg bg-center">
@@ -210,7 +210,7 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section>
+      <section id="features">
         <div className="my-container w-full my-24">
           <h3 className="text-[16px] lg:text-[36px] text-textPrimary font-bold text-center">
             Cueprise Solutions for your business
@@ -275,7 +275,7 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="bg-[#FAF6FF]">
+      <section id="why" className="bg-[#FAF6FF]">
         <div className="lg:flex items-center justify-between pl-[5%] hidden">
           <div className="relative">
             <div className="w-[65%]">
@@ -384,7 +384,7 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="bg-pricingWavyBg">
+      <section id="pricing" className="bg-pricingWavyBg">
         <div className="my-container py-32">
           <div>
             <h3 className="text-[16px] lg:text-[36px] text-textPrimary font-bold text-center">
@@ -839,7 +839,7 @@ export const Homepage = () => {
           </div>
 
           <div className="flex gap-4 py-20 w-full overflow-hidden">
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -881,7 +881,7 @@ export const Homepage = () => {
                   accepting payments from customers
                 </p>
               </div>
-              <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
+              <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6 ">
                 <img
                   src={AyAvatar}
                   alt="An avatar for the reviewer"
@@ -899,7 +899,7 @@ export const Homepage = () => {
               </div>
             </div>
 
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -958,7 +958,7 @@ export const Homepage = () => {
               </div>
             </div>
 
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -1018,7 +1018,7 @@ export const Homepage = () => {
               </div>
             </div>
 
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -1081,21 +1081,21 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="">
+      <section id="newsletter" className="">
         {/* <div className="bg-[#B888F1] bg-[length:100%_50vh] bg-opacity-[12%]"> */}
         <div className="bg-[#B888F1] bg-opacity-[12%] pt-20 lg:pt-0">
           <div className="my-container lg:flex items-center justify-end min-h-screen relative">
-            <div className="bg-[#634D7C] border-none rounded-[15px] absolute lg:left-0 lg:top-[37%] left-10 -top-16">
+            <div className="bg-[#634D7C] border-none rounded-[15px] absolute lg:left-0 lg:top-[30%] left-10 -top-16">
               <div className="relative">
                 <img
                   src={NewsletterSmall}
                   alt="Another pattern design"
-                  className="w-[255px] lg:w-[539px] lg:h-[312px]"
+                  className="w-[255px] lg:w-[539px] lg:h-[100%]"
                 />
-                <div className="absolute lg:w-inherit lg:h-inherit top-0 left-0 w-full h-full lg:p-8 p-4">
+                <div className="absolute lg:w-inherit lg:h-inherit top-0 left-0 w-full h-full lg:p-8 p-4 ">
                   <div className="flex flex-col gap-2 lg:gap-4">
                     <span className="text-[10px] lg:text-[16px] text-white">
-                      SUBSCRIBE TO OUR NEWSLETTER
+                      JOIN THE WAITING LIST
                     </span>
                     <p className="text-[12px] lg:text-[32px] lg:w-[90%] text-white ">
                       Get exciting updates about Cueprise and Productivity.

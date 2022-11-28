@@ -29,10 +29,14 @@ export const Footer = () => {
           Navigation
         </span>
         <span className="text-[12px] lg:text-[15px] text-white">
-          Benefits & Pricing
+          <a href="#pricing">Benefits & Pricing</a>
         </span>
-        <span className="text-[12px] lg:text-[15px] text-white">Features</span>
-        <span className="text-[12px] lg:text-[15px] text-white">Contacts</span>
+        <span className="text-[12px] lg:text-[15px] text-white">
+          <a href="#features">Features</a>
+        </span>
+        <span className="text-[12px] lg:text-[15px] text-white">
+          <a href="#newsletter">Contacts</a>
+        </span>
       </div>
     </footer>
   );
