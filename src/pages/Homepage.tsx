@@ -528,7 +528,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[11px] lg:text-[#475569] text-[14px]">
+              <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
@@ -606,7 +606,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[11px] lg:text-[#475569] text-[14px]">
+              <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
@@ -688,7 +688,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[11px] lg:text-[#475569] text-[14px]">
+              <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
