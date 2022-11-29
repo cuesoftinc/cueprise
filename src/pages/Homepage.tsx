@@ -60,7 +60,7 @@ export const Homepage = () => {
       <div className="text-transparent pointer-events-none  w-[10%] h-[100] top-[35%] left-[10%] absolute rounded-full shadow-[0_0_600px_60px_#CDB0EF]"></div>
       <div className="text-transparent pointer-events-none  w-[10%] h-[100] bottom-[35%] right-[5%] absolute rounded-full shadow-[0_0_600px_60px_#CDB0EF]"></div>
 
-      <section className="my-container py-12">
+      <section id="hero" className="my-container py-12">
         <div className="flex justify-between">
           <div className="w-[20%] lg:w-[20%] flex justify-end ">
             <img
@@ -114,10 +114,9 @@ export const Homepage = () => {
           </div>
           <div className=" lg:w-[55%] flex flex-col gap-12 items-center">
             <p className="text-center text-[12px] lg:text-[18px] text-textPrimary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor,
-              odio sagittis, diam tincidunt neque velit nec cras. Et convallis
-              pellentesque et, tellus et feugiat in metus sed. Quis turpis nunc
-              nulla vel facilisi metus. Arcu.
+              Manage your inventory, accept payments, generate transaction
+              reports, pay employees and respond to customer inquiries in one
+              click!.
             </p>
 
             <div className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-8 lg:justify-between">
@@ -128,7 +127,7 @@ export const Homepage = () => {
                   className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px]"
                 />
                 <span className="text-[12px] lg:text-[16px] text-bgPrimary">
-                  Checkout DEMO
+                  Watch A Demo
                 </span>
               </div>
 
@@ -151,7 +150,7 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="my-8 relative">
+      <section id="customer-companies" className="my-8 relative">
         {/* <div className="bg-[#F1F5F9] bg-opacity-100 w-screen h-[0px] absolute bottom-[30%] shadow-[0_0_700px_140px_#F1F5F9]"></div> */}
 
         <div className="lg:bg-screenSectionBg bg-center">
@@ -211,7 +210,7 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section>
+      <section id="features">
         <div className="my-container w-full my-24">
           <h3 className="text-[16px] lg:text-[36px] text-textPrimary font-bold text-center">
             Cueprise Solutions for your business
@@ -226,9 +225,8 @@ export const Homepage = () => {
                 Inventory
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-                feugiat arcu, non senectus integer. Risus morbi nec varius neque
-                nunc, ut. Justo elementum potenti sed tempor. Egestas duis.
+                Manage your inventory and product stock while you focus on other
+                executive aspects of your business.
               </p>
             </div>
 
@@ -254,9 +252,9 @@ export const Homepage = () => {
                 Payroll
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-                feugiat arcu, non senectus integer. Risus morbi nec varius neque
-                nunc, ut. Justo elementum potenti sed tempor. Egestas duis.
+                Allows your HR department to focus on other aspects of human
+                resource management by relieving them of the burden of employee
+                payment.
               </p>
             </div>
 
@@ -277,16 +275,16 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="bg-[#FAF6FF]">
+      <section id="why" className="bg-[#FAF6FF]">
         <div className="lg:flex items-center justify-between pl-[5%] hidden">
           <div className="relative">
-            <div className="w-[70%]">
+            <div className="w-[65%]">
               <span className="font-bold text-[52px] leading-[78px] text-[#0C0047]">
-                Eleifend ac consectetur diam.
+                What makes us different from our competitors?
               </span>
               <p className="text-[14px] text-[#969696] mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Sagittis aenean id ut est, in. Cursus in varius cras arcu.{" "}
+                We are a better solution in terms of privacy, local compliance,
+                and data prevention.
               </p>
               <div className="flex mt-4">
                 <div className="w-fit relative flex">
@@ -301,13 +299,13 @@ export const Homepage = () => {
               </div>
               <button className="btn mt-8">Try for free</button>
             </div>
-            <div className="absolute right-[20%] bottom-0">
+            <div className="absolute right-[45%] -bottom-4">
               <img
                 src={TwistLeftVector}
                 alt="a twist like vector for design purposes"
               />
             </div>
-            <div className="absolute -right-[65%] -top-16">
+            <div className="absolute -right-[30%] -top-8">
               <img
                 src={LaptopScreen}
                 alt="A laptop screen showing the product"
@@ -386,17 +384,14 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="bg-pricingWavyBg">
+      <section id="pricing" className="bg-pricingWavyBg">
         <div className="my-container py-32">
           <div>
             <h3 className="text-[16px] lg:text-[36px] text-textPrimary font-bold text-center">
-              Our Pricing
+              Get Yourself A Cueprise Plan And Level Up!
             </h3>
             <p className="text-[12px] lg:text-[16px] text-[#64748B] font-medium lg:w-[80%] text-center mx-auto mt-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget at
-              risus lorem nec eu libero elementum. Orci, sed laoreet cursus
-              lobortis auctor nulla lobortis viverra. Lobortis fusce ac magnis
-              velit viverra. Id imperdiet orci molestie adipiscing pretium.
+              Spend a quarter as much as you would with our Competitors.
             </p>
           </div>
           <div>
@@ -533,7 +528,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[11px] lg:text-[#475569] text-[14px]">
+              <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
@@ -611,7 +606,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[11px] lg:text-[#475569] text-[14px]">
+              <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
@@ -693,7 +688,7 @@ export const Homepage = () => {
                 </button>
               </div>
 
-              <div className="mt-10 text-[11px] lg:text-[#475569] text-[14px]">
+              <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
                 <div className="flex items-center gap-4">
                   <img
                     src={CheckIconActive}
@@ -844,7 +839,7 @@ export const Homepage = () => {
           </div>
 
           <div className="flex gap-4 py-20 w-full overflow-hidden">
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -881,12 +876,12 @@ export const Homepage = () => {
                   />
                 </div>
                 <p className="text-[10px] lg:text-[16px] text-[#797979] mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque tristique tellus nisi feugiat porttitor. At
-                  potenti vel id.
+                  Cueprise has greatly eased my entrepreneurial journey by
+                  assisting with paying the salaries of my employees and
+                  accepting payments from customers
                 </p>
               </div>
-              <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
+              <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6 ">
                 <img
                   src={AyAvatar}
                   alt="An avatar for the reviewer"
@@ -895,16 +890,16 @@ export const Homepage = () => {
 
                 <div className="flex flex-col justify-between">
                   <span className="text-[8px] lg:text-[14px] text-[#64748B] font-semibold">
-                    Owoetoni Ayodele
+                    Ore Solabomi
                   </span>
                   <span className="text-[8px] lg:text-[14px] text-[#94A3B8]">
-                    Product Designer
+                    CEO, Tames Clothing
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -941,9 +936,8 @@ export const Homepage = () => {
                   />
                 </div>
                 <p className="text-[10px] lg:text-[16px] text-[#797979] mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque tristique tellus nisi feugiat porttitor. At
-                  potenti vel id.
+                  Cueprise has relieved me of the constant end-of-month hassle
+                  of paying the salaries of my employees.
                 </p>
               </div>
               <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
@@ -955,16 +949,16 @@ export const Homepage = () => {
 
                 <div className="flex flex-col justify-between">
                   <span className="text-[8px] lg:text-[14px] text-[#64748B] font-semibold">
-                    Owoetoni Ayodele
+                    Bola Victor
                   </span>
                   <span className="text-[8px] lg:text-[14px] text-[#94A3B8]">
-                    Product Designer
+                    Human Resource Manager
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -1024,7 +1018,7 @@ export const Homepage = () => {
               </div>
             </div>
 
-            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative">
+            <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
                   src={QuotesIcon}
@@ -1087,21 +1081,21 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section className="">
+      <section id="newsletter" className="">
         {/* <div className="bg-[#B888F1] bg-[length:100%_50vh] bg-opacity-[12%]"> */}
         <div className="bg-[#B888F1] bg-opacity-[12%] pt-20 lg:pt-0">
           <div className="my-container lg:flex items-center justify-end min-h-screen relative">
-            <div className="bg-[#634D7C] border-none rounded-[15px] absolute lg:left-0 lg:top-[37%] left-10 -top-16">
+            <div className="bg-[#634D7C] border-none rounded-[15px] absolute lg:left-0 lg:top-[30%] left-10 -top-16">
               <div className="relative">
                 <img
                   src={NewsletterSmall}
                   alt="Another pattern design"
-                  className="w-[255px] lg:w-[539px] lg:h-[312px]"
+                  className="w-[255px] lg:w-[539px] lg:h-[100%]"
                 />
-                <div className="absolute lg:w-inherit lg:h-inherit top-0 left-0 w-full h-full lg:p-8 p-4">
+                <div className="absolute lg:w-inherit lg:h-inherit top-0 left-0 w-full h-full lg:p-8 p-4 ">
                   <div className="flex flex-col gap-2 lg:gap-4">
                     <span className="text-[10px] lg:text-[16px] text-white">
-                      SUBSCRIBE TO OUR NEWSLETTER
+                      JOIN THE WAITING LIST
                     </span>
                     <p className="text-[12px] lg:text-[32px] lg:w-[90%] text-white ">
                       Get exciting updates about Cueprise and Productivity.
