@@ -31,25 +31,31 @@ export const Navbar = () => {
             src={NavEllipse}
             alt="a grey ellipse vector for navigation items"
           />
-          <h1>Features</h1>
+          <h1>
+            <a href="#features">Features</a>
+          </h1>
         </div>
         <div className="flex gap-2 justify-between cursor-pointer">
           <img
             src={NavEllipse}
             alt="a grey ellipse vector for navigation items"
           />
-          <h1>Pricing</h1>
+          <h1>
+            <a href="#pricing">Pricing</a>
+          </h1>
         </div>
         <div className="flex gap-2 justify-between cursor-pointer">
           <img
             src={NavEllipse}
             alt="a grey ellipse vector for navigation items"
           />
-          <h1>Contact</h1>
+          <h1>
+            <a href="#newsletter">Contact</a>
+          </h1>
         </div>
       </div>
 
-      <button className="hidden lg:flex btn">Get Started</button>
+      <button className="hidden lg:block btn">Get Started</button>
 
       {/* Mobile View */}
 
