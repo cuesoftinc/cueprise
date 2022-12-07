@@ -150,10 +150,10 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section id="customer-companies" className="my-8 relative">
+      <section id="customer-companies" className="lg:my-8 relative">
         {/* <div className="bg-[#F1F5F9] bg-opacity-100 w-screen h-[0px] absolute bottom-[30%] shadow-[0_0_700px_140px_#F1F5F9]"></div> */}
 
-        <div className="lg:bg-screenSectionBg bg-center">
+        <div className="lg:bg-screenSectionBg bg-center overflow-x-hidden">
           <div className="my-container flex justify-between ">
             <img
               src={CuepriseScreenLaptop}
@@ -168,11 +168,11 @@ export const Homepage = () => {
           </div>
 
           <div>
-            <div className="my-container text-center my-32 bg-screenSectionBg lg:bg-none">
+            <div className="my-container text-center my-12 lg:my-32 lg:bg-none">
               <h3 className="text-[16px] lg:text-[32px] text-textHeader font-bold">
                 Trusted by reputable companies
               </h3>
-              <div className="flex justify-around items-center min-h-full py-12">
+              <div className="flex justify-around items-center min-h-full py-6 lg:py-12">
                 <div>
                   <img
                     src={Umobile}
@@ -210,8 +210,8 @@ export const Homepage = () => {
         </div>
       </section>
 
-      <section id="features">
-        <div className="my-container w-full my-24">
+      <section id="features" className="">
+        <div className="my-container w-full my-12 lg:my-24">
           <h3 className="text-[16px] lg:text-[36px] text-textPrimary font-bold text-center">
             Cueprise Solutions for your business
           </h3>
@@ -276,10 +276,10 @@ export const Homepage = () => {
       </section>
 
       <section id="why" className="bg-[#FAF6FF]">
-        <div className="lg:flex items-center justify-between pl-[5%] hidden">
+        <div className="md:flex items-center justify-between pl-[5%] hidden">
           <div className="relative">
             <div className="w-[65%]">
-              <span className="font-bold text-[52px] leading-[78px] text-[#0C0047]">
+              <span className="font-bold text-[30px] xl:text-[52px] xl:leading-[78px] text-[#0C0047]">
                 What makes us different from our competitors?
               </span>
               <p className="text-[14px] text-[#969696] mt-4">
@@ -288,10 +288,26 @@ export const Homepage = () => {
               </p>
               <div className="flex mt-4">
                 <div className="w-fit relative flex">
-                  <img src={Mask1} alt="Avatar" />
-                  <img src={Mask2} alt="Avatar" className="relative -left-2" />
-                  <img src={Mask3} alt="Avatar" className="relative -left-4" />
-                  <img src={Mask4} alt="Avatar" className="relative -left-6" />
+                  <img
+                    src={Mask1}
+                    alt="Avatar"
+                    className=" w-[40px] h-[40px] lg:w-[24px] lg:h-[24px]"
+                  />
+                  <img
+                    src={Mask2}
+                    alt="Avatar"
+                    className="relative -left-4 lg:-left-2 w-[40px] h-[40px] lg:w-[24px] lg:h-[24px]"
+                  />
+                  <img
+                    src={Mask3}
+                    alt="Avatar"
+                    className="relative -left-10 lg:-left-4 w-[40px] h-[40px] lg:w-[24px] lg:h-[24px]"
+                  />
+                  <img
+                    src={Mask4}
+                    alt="Avatar"
+                    className="relative -left-14 lg:-left-6 w-[40px] h-[40px] lg:w-[24px] lg:h-[24px]"
+                  />
                 </div>
                 <span className="font-semibold text-[14px] text-[#343434]">
                   More than 10.000 people have tried
@@ -299,17 +315,18 @@ export const Homepage = () => {
               </div>
               <button className="btn mt-8">Try for free</button>
             </div>
-            <div className="absolute right-[45%] -bottom-4">
+            <div className="absolute right-[30%] -bottom-6 xl:right-[35%] xl:-bottom-16">
               <img
                 src={TwistLeftVector}
                 alt="a twist like vector for design purposes"
+                className="w-[150px] h-[100px] xl:w-[200px] xl:h-[200px]"
               />
             </div>
-            <div className="absolute -right-[30%] -top-8">
+            <div className="absolute -right-[60%] -top-1 lg:-right-[40%] lg:-top-4 xl:-top-16 xl:-right-[30%]">
               <img
                 src={LaptopScreen}
                 alt="A laptop screen showing the product"
-                className="w-[650px] h-[400px]"
+                className="w-[400px] h-[250px] xl:w-[650px] xl:h-[400px]"
               />
             </div>
           </div>
@@ -321,16 +338,16 @@ export const Homepage = () => {
             />
           </div>
         </div>
-        <div className="flex justify-between lg:hidden">
+        <div className="flex justify-between md:hidden">
           <div className="p-12 pr-0  w-[60%] relative">
             <div className="w-[80%]">
               <span className="font-bold text-[16px] text-[#0C0047]">
-                Eleifend ac consectetur diam.
+                What makes us different from our competitors?
               </span>
             </div>
             <p className="text-[12px] text-[#969696] mt-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
-              aenean id ut est, in. Cursus in varius cras arcu.{" "}
+              We are a better solution in terms of privacy, local compliance,
+              and data prevention.{" "}
             </p>
             <div className="flex mt-2 items-center">
               <div className="w-fit flex">
@@ -359,15 +376,15 @@ export const Homepage = () => {
               Try for free
             </button>
 
-            <div className="bg-red-500 mt-8 relative min-h-fit">
+            <div className="mt-8 relative min-h-fit">
               <img
                 src={TwistUpVector}
                 alt="A twisted arrow vector for design purpose"
-                className="absolute right-6 "
+                className="absolute right-6"
               />
             </div>
 
-            <div className="bg-blue-400 relative">
+            <div className="relative">
               <img
                 src={LaptopScreenMobile}
                 alt="A laptop screen showing the product"
@@ -385,7 +402,7 @@ export const Homepage = () => {
       </section>
 
       <section id="pricing" className="bg-pricingWavyBg">
-        <div className="my-container py-32">
+        <div className="my-container py-8 lg:py-32">
           <div>
             <h3 className="text-[16px] lg:text-[36px] text-textPrimary font-bold text-center">
               Get Yourself A Cueprise Plan And Level Up!
@@ -818,7 +835,7 @@ export const Homepage = () => {
         id="reviews"
         className="flex items-center md:min-h-screen bg-[#FDF7F6] bg-opacity-[44%]"
       >
-        <div className="my-container py-24">
+        <div className="my-container py-14 lg:py-24">
           <div className="relative text-center w-full">
             <h3 className="text-[#475569] text-[16px] lg:text-[32px] font-semibold w-[60%] mx-auto">
               What our users are saying about Cueprise
@@ -1083,8 +1100,8 @@ export const Homepage = () => {
 
       <section id="newsletter" className="">
         {/* <div className="bg-[#B888F1] bg-[length:100%_50vh] bg-opacity-[12%]"> */}
-        <div className="bg-[#B888F1] bg-opacity-[12%] pt-20 lg:pt-0">
-          <div className="my-container lg:flex items-center justify-end min-h-screen relative">
+        <div className="bg-[#B888F1] bg-opacity-[12%] py-20 lg:py-0">
+          <div className="my-container lg:flex items-center justify-end lg:min-h-screen relative">
             <div className="bg-[#634D7C] border-none rounded-[15px] absolute lg:left-0 lg:top-[30%] left-10 -top-16">
               <div className="relative">
                 <img
