@@ -59,17 +59,19 @@ export const Navbar = () => {
 
       {/* Mobile View */}
 
-      <button
-        id="menu-btn"
-        className={`inline-block hamburger lg:hidden focus:outline-none ${
-          open ? "open" : ""
-        } `}
-        onClick={handleClick}
-      >
-        <span className="hamburger-top dark:bg-white"></span>
-        <span className="hamburger-middle dark:bg-white"></span>
-        <span className="hamburger-bottom dark:bg-white"></span>
-      </button>
+      <div className="w-full text-right lg:hidden">
+        <button
+          id="menu-btn"
+          className={`inline-block hamburger lg:hidden focus:outline-none ${
+            open ? "open" : ""
+          } justify-self-end`}
+          onClick={handleClick}
+        >
+          <span className="hamburger-top dark:bg-white"></span>
+          <span className="hamburger-middle dark:bg-white"></span>
+          <span className="hamburger-bottom dark:bg-white"></span>
+        </button>
+      </div>
 
       <div className="lg:hidden">
         <div
