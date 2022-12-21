@@ -48,13 +48,24 @@ import AyAvatar from "../assets/imgs/ay-avatar.svg";
 
 import NewsletterBig from "../assets/others/newsletter-subscribe-large-bg.svg";
 import NewsletterSmall from "../assets/others/newsletter-subscribe-small-mask.svg";
+import { CustomModal } from "../components/custom-modal/CustomModal";
 
 export const Homepage = () => {
   const [mChecked, setMChecked] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const handleClick = () => {
     setMChecked((prev) => !prev);
   };
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
+
   return (
     <main data-testid="homepage">
       <div className="text-transparent pointer-events-none  w-[10%] h-[100] top-[35%] left-[10%] absolute rounded-full shadow-[0_0_600px_60px_#CDB0EF]"></div>
@@ -120,13 +131,16 @@ export const Homepage = () => {
             </p>
 
             <div className="flex flex-col lg:flex-row justify-center items-center gap-4 lg:gap-8 lg:justify-between">
-              <div className="flex gap-4 items-center">
+              <div
+                className="flex gap-4 items-center"
+                onClick={handleOpenModal}
+              >
                 <img
                   src={HeroPlayIcon}
                   alt="A play button Icon"
-                  className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px]"
+                  className="w-[30px] h-[30px] lg:w-[45px] lg:h-[45px] cursor-pointer"
                 />
-                <span className="text-[12px] lg:text-[16px] text-bgPrimary">
+                <span className="text-[12px] lg:text-[16px] text-bgPrimary cursor-pointer">
                   Watch A Demo
                 </span>
               </div>
@@ -148,6 +162,8 @@ export const Homepage = () => {
             />
           </div>
         </div>
+
+        <CustomModal openModal={openModal} closeModal={handleCloseModal} />
       </section>
 
       <section id="customer-companies" className="lg:my-8 relative">
