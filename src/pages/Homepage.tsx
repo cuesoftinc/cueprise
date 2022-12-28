@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import HeroTwistArrowLeft from "../assets/vectors/hero-twist-arrow-vector-left.svg";
 import HeroTwistArrowRight from "../assets/vectors/hero-twist-arrow-vector-right.svg";
@@ -49,10 +49,17 @@ import AyAvatar from "../assets/imgs/ay-avatar.svg";
 import NewsletterBig from "../assets/others/newsletter-subscribe-large-bg.svg";
 import NewsletterSmall from "../assets/others/newsletter-subscribe-small-mask.svg";
 import { CustomModal } from "../components/custom-modal/CustomModal";
+import logger from "../libs/logger";
 
 export const Homepage = () => {
   const [mChecked, setMChecked] = useState(false);
   const [openModal, setOpenModal] = useState(false);
+
+  const [email, setEmail] = useState("");
+
+  const [formStatus, setFormStatus] = useState("");
+  const [formError, setFormError] = useState("");
+  const [formLoading, setFormLoading] = useState(false);
 
   const handleClick = () => {
     setMChecked((prev) => !prev);
@@ -65,6 +72,71 @@ export const Homepage = () => {
   const handleCloseModal = () => {
     setOpenModal(false);
   };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (formLoading) return;
+
+    const table_id = process.env.REACT_APP_AIRTABLE_TABLE_ID_WAITING_LIST;
+    const base_id = process.env.REACT_APP_AIRTABLE_BASE_ID;
+    const api_key = process.env.REACT_APP_AIRTABLE_API_KEY;
+
+    const myHeaders_ = {
+      Authorization: `Bearer ${api_key}`,
+      "Content-Type": "application/json"
+    };
+
+    const data = {
+      fields: {
+        Email: email
+      }
+    };
+
+    setFormLoading(true);
+
+    fetch(`https://api.airtable.com/v0/${base_id}/${table_id}`, {
+      method: "POST",
+      headers: myHeaders_,
+      body: JSON.stringify(data)
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        logger.info(data);
+
+        if (data.error) {
+          setFormLoading(false);
+          logger.error(data.error);
+          setFormStatus("Error");
+          setFormError(data.error.message);
+        } else {
+          setEmail("");
+          setFormLoading(false);
+          setFormError("");
+          setFormStatus("Success");
+        }
+      })
+      .catch((error) => {
+        logger.error(error);
+        setFormLoading(false);
+        setFormError(error.message);
+      });
+  };
+
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      if (formError !== "" || formStatus !== "") {
+        setFormError("");
+        setFormStatus("");
+      }
+    }, 5000);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [formLoading, formError, formStatus]);
 
   return (
     <main data-testid="homepage">
@@ -167,8 +239,6 @@ export const Homepage = () => {
       </section>
 
       <section id="customer-companies" className="lg:my-8 relative">
-        {/* <div className="bg-[#F1F5F9] bg-opacity-100 w-screen h-[0px] absolute bottom-[30%] shadow-[0_0_700px_140px_#F1F5F9]"></div> */}
-
         <div className="lg:bg-screenSectionBg bg-center overflow-x-hidden">
           <div className="my-container flex justify-between ">
             <img
@@ -1115,7 +1185,6 @@ export const Homepage = () => {
       </section>
 
       <section id="newsletter" className="">
-        {/* <div className="bg-[#B888F1] bg-[length:100%_50vh] bg-opacity-[12%]"> */}
         <div className="bg-[#B888F1] bg-opacity-[12%] py-20 lg:py-0">
           <div className="my-container lg:flex items-center justify-end lg:min-h-screen relative">
             <div className="bg-[#634D7C] border-none rounded-[15px] absolute lg:left-0 lg:top-[30%] left-10 -top-16">
@@ -1126,7 +1195,7 @@ export const Homepage = () => {
                   className="w-[255px] lg:w-[539px] lg:h-[100%]"
                 />
                 <div className="absolute lg:w-inherit lg:h-inherit top-0 left-0 w-full h-full lg:p-8 p-4 ">
-                  <div className="flex flex-col gap-2 lg:gap-4">
+                  <div className="flex flex-col gap-2 lg:gap-4 relative">
                     <span className="text-[10px] lg:text-[16px] text-white">
                       JOIN THE WAITING LIST
                     </span>
@@ -1134,16 +1203,60 @@ export const Homepage = () => {
                       Get exciting updates about Cueprise and Productivity.
                     </p>
 
-                    <div className="mt-2 lg:mt-4">
+                    <form
+                      className="mt-2 lg:mt-4 flex"
+                      onSubmit={handleFormSubmit}
+                    >
                       <input
                         type="text"
                         placeholder="YOUR EMAIL ADDRESS"
                         className="py-2 lg:py-4 px-4 lg:px-6 placeholder:text-[#1B1C31] placeholder:opacity-40 text-[8px] lg:text-[14px] w-[70%] bg-white bg-opacity-60 rounded-l-lg focus:outline-none"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
-                      <button className="text-[8px] lg:text-[14px] text-white bg-bgPrimary text-center p-2 lg:py-4 lg:px-6 rounded-r-lg">
+                      <button
+                        type="submit"
+                        className="flex items-center justify-center text-[8px] lg:text-[14px] text-white bg-bgPrimary text-center p-2 lg:py-4 lg:px-6 rounded-r-lg hover:bg-[#B491FB]"
+                      >
+                        {formLoading ? (
+                          <svg
+                            className="w-5 h-5 mr-3 -ml-1 text-white animate-spin"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              stroke-width="4"
+                            ></circle>
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                            ></path>
+                          </svg>
+                        ) : null}
                         SUBSCRIBE
                       </button>
-                    </div>
+                    </form>
+
+                    {formStatus === "Error" && formError ? (
+                      <div className="bg-white border border-red-500 rounded-sm p-2 mt-4">
+                        <span className="text-red-500 text-sm">
+                          {formError}
+                        </span>
+                      </div>
+                    ) : formStatus === "Success" ? (
+                      <div className="mt-4 bg-white border border-green-500 rounded-sm p-2">
+                        <span className="text-green-500 text-sm">
+                          Added Successfully
+                        </span>
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               </div>
