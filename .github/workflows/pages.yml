@@ -56,6 +56,3 @@ jobs:
           path: build
       - id: deployment
         uses: actions/deploy-pages@main
-      - run: npm ci
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GH_PACKAGE_PAT}}
