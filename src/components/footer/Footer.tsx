@@ -21,7 +21,9 @@ export const Footer = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt.
         </span>
-        <button className="btn-dark block mt-6 lg:mt-12">Get started</button>
+        <a href="#newsletter">
+          <button className="btn-dark block mt-6 lg:mt-12">Get started</button>
+        </a>
       </div>
 
       <div className="flex flex-col gap-4">
