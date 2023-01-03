@@ -217,14 +217,16 @@ export const Homepage = () => {
                 </span>
               </div>
 
-              <button className="btn text-[12px] lg:text-[16px] flex justify-center gap-2 items-center">
-                <p>Get Started</p>
-                <img
-                  src={HeroGetStartedArrowIcon}
-                  alt="A directional arrow for the get started button"
-                  className="inline"
-                />
-              </button>
+              <a href="#newsletter">
+                <button className="btn text-[12px] lg:text-[16px] flex justify-center gap-2 items-center">
+                  <p>Get Started</p>
+                  <img
+                    src={HeroGetStartedArrowIcon}
+                    alt="A directional arrow for the get started button"
+                    className="inline"
+                  />
+                </button>
+              </a>
             </div>
           </div>
           <div className="w-[20%] hidden lg:flex">
@@ -399,7 +401,9 @@ export const Homepage = () => {
                   More than 10.000 people have tried
                 </span>
               </div>
-              <button className="btn mt-8">Try for free</button>
+              <a href="#newsletter">
+                <button className="btn mt-8">Try for free</button>
+              </a>
             </div>
             <div className="absolute right-[30%] -bottom-6 xl:right-[35%] xl:-bottom-16">
               <img
@@ -458,9 +462,11 @@ export const Homepage = () => {
                 More than 10.000 people have tried
               </span>
             </div>
-            <button className="rounded-md bg-bgPrimary text-white lg:py-3 lg:px-5 py-2 px-2 text-center mt-4 text-[12px] w-full">
-              Try for free
-            </button>
+            <a href="#newsletter">
+              <button className="rounded-md bg-bgPrimary text-white lg:py-3 lg:px-5 py-2 px-2 text-center mt-4 text-[12px] w-full">
+                Try for free
+              </button>
+            </a>
 
             <div className="mt-8 relative min-h-fit">
               <img
@@ -541,9 +547,11 @@ export const Homepage = () => {
                     /Users/Month
                   </span>
                 </div>
-                <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
-                  Select Plan
-                </button>
+                <a href="#newsletter">
+                  <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
+                    Select Plan
+                  </button>
+                </a>
               </div>
 
               <div className="mt-10 text-[11px] lg:text-[14px] text-[#F1F5F9]">
@@ -626,9 +634,11 @@ export const Homepage = () => {
                     /Users/Month
                   </span>
                 </div>
-                <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
-                  Select Plan
-                </button>
+                <a href="#newsletter">
+                  <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
+                    Select Plan
+                  </button>
+                </a>
               </div>
 
               <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
@@ -704,9 +714,11 @@ export const Homepage = () => {
                     /Users/Month
                   </span>
                 </div>
-                <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
-                  Select Plan
-                </button>
+                <a href="#newsletter">
+                  <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
+                    Select Plan
+                  </button>
+                </a>
               </div>
 
               <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
@@ -786,9 +798,11 @@ export const Homepage = () => {
                     /Month
                   </span>
                 </div>
-                <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
-                  Select Plan
-                </button>
+                <a href="#newsletter">
+                  <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
+                    Select Plan
+                  </button>
+                </a>
               </div>
 
               <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
@@ -868,9 +882,11 @@ export const Homepage = () => {
                     /Month
                   </span>
                 </div>
-                <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
-                  Select Plan
-                </button>
+                <a href="#newsletter">
+                  <button className="rounded-md bg-bgPrimary text-white py-3 px-5 text-center w-full mt-6 text-[11px]">
+                    Select Plan
+                  </button>
+                </a>
               </div>
 
               <div className="mt-10 text-[11px] lg:text-[#475569] lg:text-[14px]">
@@ -1213,6 +1229,7 @@ export const Homepage = () => {
                         className="py-2 lg:py-4 px-4 lg:px-6 placeholder:text-[#1B1C31] placeholder:opacity-40 text-[8px] lg:text-[14px] w-[70%] bg-white bg-opacity-60 rounded-l-lg focus:outline-none"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                       />
                       <button
                         type="submit"
