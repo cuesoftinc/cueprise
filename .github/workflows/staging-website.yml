@@ -1,0 +1,51 @@
+name: Deploy static content to Amplify
+
+on:
+  push:
+    branches: [release/*]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 17.0.1
+          registry-url: https://npm.pkg.github.com/
+          cache: "npm"
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GH_PACKAGE_PAT}}
+      - run: npm run build --if-present
+        env:
+          REACT_APP_AIRTABLE_API_KEY: ${{ secrets.REACT_APP_AIRTABLE_API_KEY }}
+          REACT_APP_AIRTABLE_BASE_ID: ${{ secrets.REACT_APP_AIRTABLE_BASE_ID }}
+          REACT_APP_AIRTABLE_TABLE_ID_WAITING_LIST: ${{ secrets.REACT_APP_AIRTABLE_TABLE_ID_WAITING_LIST }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
+      - uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: arn:aws:iam::${{ secrets.STAGING_CUEPRISE_ACCOUNT_ID }}:role/AWSControlTowerExecution
+      - run: |
+          APP_ID=d1mhx3tq8nia22
+          BRANCH_NAME=${{ github.head_ref || github.ref_name }}
+          JOB_ID=$(aws amplify start-job --app-id $APP_ID --branch-name $BRANCH_NAME --job-type RELEASE | jq -r '.jobSummary.jobId')
+          while [[ "$(aws amplify get-job --app-id $APP_ID --branch-name $BRANCH_NAME --job-id $JOB_ID | jq -r '.job.summary.status')" =~ ^(PENDING|RUNNING)$ ]]; do sleep 1; done
+          JOB_STATUS="$(aws amplify get-job --app-id $APP_ID --branch-name $BRANCH_NAME --job-id $JOB_ID | jq -r '.job.summary.status')"
+          echo "Job status is $JOB_STATUS"
