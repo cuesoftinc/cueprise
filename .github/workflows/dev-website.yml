@@ -43,6 +43,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: arn:aws:iam::${{ secrets.DEV_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
+          role-duration-seconds: 1200
       - run: |
           APP_ID=d1mwodxgzbpdn2
           BRANCH_NAME=main

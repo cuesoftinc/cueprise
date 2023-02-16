@@ -42,6 +42,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: arn:aws:iam::${{ secrets.STAGING_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
+          role-duration-seconds: 1200
       - run: |
           APP_ID=d1mhx3tq8nia22
           BRANCH_NAME=${{ github.head_ref || github.ref_name }}
