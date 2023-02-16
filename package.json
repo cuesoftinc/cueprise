@@ -39,7 +39,7 @@
   "bugs": {
     "url": "https://github.com/CuesoftCloud/cueprise-website/issues"
   },
-  "homepage": "https://staging.cueprise.com",
+  "homepage": "https://cueprise.com",
   "eslintConfig": {
     "extends": [
       "react-app",
