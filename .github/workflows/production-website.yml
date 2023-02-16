@@ -4,6 +4,8 @@ on:
   release:
     types: [created]
 
+concurrency: "production"
+
 jobs:
   build:
     runs-on: ubuntu-latest
