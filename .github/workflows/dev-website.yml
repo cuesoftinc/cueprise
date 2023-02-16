@@ -44,12 +44,9 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
           role-to-assume: arn:aws:iam::${{ secrets.DEV_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
           role-duration-seconds: 1200
-      - run: |
-          cd ./build
-          JOB_ID=$(aws amplify create-deployment --app-id $APP_ID --branch-name main | jq -r '.jobSummary.jobId')
-          aws amplify start-job --app-id $APP_ID --branch-name main --job-id $JOB_ID --job-type RELEASE
-          while [[ "$(aws amplify get-job --app-id $APP_ID --branch-name main --job-id $JOB_ID | jq -r '.job.summary.status')" =~ ^(PENDING|RUNNING)$ ]]; do sleep 1; done
-          JOB_STATUS="$(aws amplify get-job --app-id $APP_ID --branch-name main --job-id $JOB_ID | jq -r '.job.summary.status')"
-          echo "Job status is $JOB_STATUS"
+      - uses: montudor/action-zip@v1
+        with:
+          args: make archive
+      - run: make deploy
         env:
           APP_ID: d1q92fbhc4xyvn
