@@ -44,9 +44,10 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.STAGING_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
           role-duration-seconds: 1200
       - run: |
-          APP_ID=d1mhx3tq8nia22
-          BRANCH_NAME=${{ github.head_ref || github.ref_name }}
-          JOB_ID=$(aws amplify start-job --app-id $APP_ID --branch-name $BRANCH_NAME --job-type RELEASE | jq -r '.jobSummary.jobId')
-          while [[ "$(aws amplify get-job --app-id $APP_ID --branch-name $BRANCH_NAME --job-id $JOB_ID | jq -r '.job.summary.status')" =~ ^(PENDING|RUNNING)$ ]]; do sleep 1; done
-          JOB_STATUS="$(aws amplify get-job --app-id $APP_ID --branch-name $BRANCH_NAME --job-id $JOB_ID | jq -r '.job.summary.status')"
+          JOB_ID=$(aws amplify create-deployment --app-id $APP_ID --branch-name main | jq -r '.jobSummary.jobId')
+          aws amplify start-job --app-id $APP_ID --branch-name main --job-id $JOB_ID --job-type RELEASE
+          while [[ "$(aws amplify get-job --app-id $APP_ID --branch-name main --job-id $JOB_ID | jq -r '.job.summary.status')" =~ ^(PENDING|RUNNING)$ ]]; do sleep 1; done
+          JOB_STATUS="$(aws amplify get-job --app-id $APP_ID --branch-name main --job-id $JOB_ID | jq -r '.job.summary.status')"
           echo "Job status is $JOB_STATUS"
+        env:
+          APP_ID: d3q5cf5mmny08a https://github.com/CuesoftCloud/cueprise-website/suites/11019671131/artifacts/559297632
