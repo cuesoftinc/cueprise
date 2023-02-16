@@ -1,8 +1,10 @@
-name: Deploy static content to Amplify
+name: Deploy static content to Staging
 
 on:
   push:
     branches: [release/*]
+
+concurrency: "staging"
 
 jobs:
   build:
