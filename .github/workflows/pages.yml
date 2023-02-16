@@ -34,7 +34,7 @@ jobs:
           REACT_APP_AIRTABLE_BASE_ID: ${{ secrets.REACT_APP_AIRTABLE_BASE_ID }}
           REACT_APP_AIRTABLE_TABLE_ID_WAITING_LIST: ${{ secrets.REACT_APP_AIRTABLE_TABLE_ID_WAITING_LIST }}
       - run: npm run test:cover
-      - run: echo ${{ github.base_ref }}
+      - run: echo ${{ github.ref }}
       - uses: actions/upload-artifact@v3
         with:
           name: build
