@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build-and-test:
-    if: ${{ contains(github.base_ref, 'feature/') }}
+    # if: ${{ contains(github.base_ref, 'feature/') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
