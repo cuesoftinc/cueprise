@@ -1,7 +1,7 @@
 name: Deploy static content to Amplify
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 jobs:
@@ -30,6 +30,9 @@ jobs:
 
   deploy:
     needs: build-and-test
+    environment:
+      name: dev
+      url: https://devcueprise.com
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -45,7 +48,8 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.DEV_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
           role-duration-seconds: 1200
       - uses: montudor/action-zip@v1
-      - run: |
+      - name: Deploy to Amplify
+        run: |
           (cd build; zip -r "../build.zip" .)
           JOB=$(aws amplify create-deployment --app-id ${APP_ID} --branch-name main)
           JOB_ID=$(echo ${JOB} | jq -r '.jobId')
@@ -56,4 +60,4 @@ jobs:
           JOB_STATUS=$(aws amplify get-job --app-id ${APP_ID} --branch-name main --job-id ${JOB_ID} | jq -r '.job.summary.status')
           echo "Job status is ${JOB_STATUS}"
         env:
-          APP_ID: d1q92fbhc4xyvn
+          APP_ID: ${{ secrets.AMPLIFY_APP_ID }}
