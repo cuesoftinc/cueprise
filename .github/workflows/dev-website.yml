@@ -1,4 +1,4 @@
-name: Deploy static content to Amplify
+name: Deploy static content to Dev
 
 on:
   push:
