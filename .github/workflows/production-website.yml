@@ -1,8 +1,10 @@
-name: Deploy static content to Amplify
+name: Deploy static content to Production
 
 on:
   release:
     types: [created]
+
+concurrency: "production"
 
 jobs:
   build:
