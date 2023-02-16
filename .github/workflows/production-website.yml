@@ -41,7 +41,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
-          role-to-assume: arn:aws:iam::${{ secrets.PRODUCTION_CUEPRISE_ACCOUNT_ID }}:role/AWSControlTowerExecution
+          role-to-assume: arn:aws:iam::${{ secrets.PRODUCTION_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
       - run: |
           APP_ID=d1vmh88mfs8q69
           BRANCH_NAME=main
