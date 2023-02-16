@@ -44,8 +44,6 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.STAGING_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
           role-duration-seconds: 1200
       - uses: montudor/action-zip@v1
-        with:
-          args: make archive
       - run: make deploy
         env:
           APP_ID: d3q5cf5mmny08a

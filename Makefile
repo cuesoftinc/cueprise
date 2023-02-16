@@ -2,6 +2,7 @@ archive:
 	cd build; zip -r "../build.zip" .
 
 deploy:
+	make archive
 	JOB=$(aws amplify create-deployment --app-id ${APP_ID} --branch-name main)
 	JOB_ID=$(${JOB} | jq -r '.jobId')
 	UPLOAD_URL=$(${JOB} | jq -r '.zipUploadUrl')
