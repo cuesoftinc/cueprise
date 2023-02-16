@@ -4,6 +4,8 @@ on:
   push:
     branches: [release/*]
 
+concurrency: "staging"
+
 jobs:
   build:
     runs-on: ubuntu-latest
