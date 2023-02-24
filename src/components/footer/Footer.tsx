@@ -18,8 +18,10 @@ export const Footer = () => {
           Want to give us a shot?
         </p>
         <span className="text-white opacity-50">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.
+          We provide a software solution for inventory, resources, payroll, and
+          CRM can streamline operations, increase efficiency, improve
+          decision-making, enhance customer relationships, and enable
+          scalability for businesses.
         </span>
         <a href="#newsletter">
           <button className="btn-dark block mt-6 lg:mt-12">Get started</button>
@@ -37,7 +39,7 @@ export const Footer = () => {
           <a href="#features">Features</a>
         </span>
         <span className="text-[12px] lg:text-[15px] text-white">
-          <a href="#newsletter">Contacts</a>
+          <a href="#newsletter">Contact</a>
         </span>
       </div>
     </footer>
