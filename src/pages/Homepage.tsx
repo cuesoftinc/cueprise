@@ -313,8 +313,9 @@ export const Homepage = () => {
                 Inventory
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Manage your inventory and product stock while you focus on other
-                executive aspects of your business.
+                For managing your inventory, you can use the inventory
+                management module to keep track of your products, track stock
+                levels, and automate ordering processes.
               </p>
             </div>
 
@@ -326,9 +327,9 @@ export const Homepage = () => {
                 Resources
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-                feugiat arcu, non senectus integer. Risus morbi nec varius neque
-                nunc, ut. Justo elementum potenti sed tempor. Egestas duis.
+                You can use the resource management module to manage your
+                resources effectively. This can help you schedule tasks, assign
+                team members to projects, and track progress.
               </p>
             </div>
 
@@ -340,9 +341,9 @@ export const Homepage = () => {
                 Payroll
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Allows your HR department to focus on other aspects of human
-                resource management by relieving them of the burden of employee
-                payment.
+                To manage your payroll effectively, you can use payroll
+                software. This can help you calculate and manage employee
+                salaries, automate tax calculations, and generate reports.
               </p>
             </div>
 
@@ -354,9 +355,9 @@ export const Homepage = () => {
                 CRM
               </span>
               <p className="text-[12px] lg:text-[14px] text-[#94A3B8] mt-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-                feugiat arcu, non senectus integer. Risus morbi nec varius neque
-                nunc, ut. Justo elementum potenti sed tempor. Egestas duis.
+                To manage your customer relationships, you can use CRM (Customer
+                Relationship Management) module. This can help you track
+                customer interactions, manage leads, and automate communication.
               </p>
             </div>
           </div>
@@ -534,10 +535,6 @@ export const Homepage = () => {
                 <span className="text-[21px] lg:text-[32px] font-extrabold text-[#F1F5F9]">
                   FREE
                 </span>
-                <p className="w-[80%] mx-auto text-[11px] lg:text-[16px] text-[#CBD5E1] mt-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
-                  sit.
-                </p>
                 <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[36px] lg:text-[56px] text-bgPrimary font-bold">
                     $0
@@ -621,10 +618,6 @@ export const Homepage = () => {
                 <span className="text-[21px] lg:text-[32px] font-extrabold text-[#475569]">
                   BASIC
                 </span>
-                <p className="w-[80%] mx-auto text-[11px] lg:text-[16px] text-[#969696] mt-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
-                  sit.
-                </p>
                 <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[36px] lg:text-[56px] text-bgPrimary font-bold">
                     $5
@@ -701,10 +694,6 @@ export const Homepage = () => {
                 <span className="text-[21px] lg:text-[32px] font-extrabold text-[#475569]">
                   STANDARD
                 </span>
-                <p className="w-[80%] mx-auto text-[11px] lg:text-[16px] text-[#969696] mt-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
-                  sit.
-                </p>
                 <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[36px] lg:text-[56px] text-bgPrimary font-bold">
                     $10
@@ -785,10 +774,6 @@ export const Homepage = () => {
                 <span className="text-[21px] lg:text-[32px] font-extrabold text-[#475569]">
                   PRO
                 </span>
-                <p className="w-[80%] mx-auto text-[11px] lg:text-[16px] text-[#969696] mt-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
-                  sit.
-                </p>
                 <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[36px] lg:text-[56px] text-bgPrimary font-bold">
                     $20
@@ -869,10 +854,6 @@ export const Homepage = () => {
                 <span className="text-[21px] lg:text-[32px] font-extrabold text-[#475569]">
                   ENTERPRISE
                 </span>
-                <p className="w-[80%] mx-auto text-[11px] lg:text-[16px] text-[#969696] mt-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
-                  sit.
-                </p>
                 <div className="flex items-baseline justify-center mt-6">
                   <span className="text-[36px] lg:text-[56px] text-bgPrimary font-bold">
                     $*****
@@ -942,11 +923,6 @@ export const Homepage = () => {
             <h3 className="text-[#475569] text-[16px] lg:text-[32px] font-semibold w-[60%] mx-auto">
               What our users are saying about Cueprise
             </h3>
-            <p className="text-[10px] lg:text-[14px] text-[#64748B] w-[70%] mx-auto mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis
-              proin est sed nunc non sed odio odio. Cursus turpis aliquam neque
-              varius sed.
-            </p>
 
             <div className="absolute right-5 top-0 lg:-top-16 lg:right-28">
               <img
@@ -957,7 +933,7 @@ export const Homepage = () => {
             </div>
           </div>
 
-          <div className="flex gap-4 py-20 w-full overflow-hidden">
+          <div className="flex gap-4 py-20 w-full overflow-x-scroll">
             <div className="min-w-[206px] lg:min-w-[375px] border border-[#EDEDED] relative flex flex-col justify-between">
               <div className="w-[29px] h-[29px] lg:w-[54px] lg:h-[54px] bg-bgPrimary flex items-center justify-center rounded-full absolute lg:-top-8 -top-4 left-3 lg:left-5">
                 <img
@@ -1002,7 +978,7 @@ export const Homepage = () => {
               </div>
               <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6 ">
                 <img
-                  src={AyAvatar}
+                  src={Mask1}
                   alt="An avatar for the reviewer"
                   className="w-[24px] h-[24px] lg:w-[36px] lg:h-[36px]"
                 />
@@ -1061,7 +1037,7 @@ export const Homepage = () => {
               </div>
               <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
                 <img
-                  src={AyAvatar}
+                  src={Mask2}
                   alt="An avatar for the reviewer"
                   className="w-[24px] h-[24px] lg:w-[36px] lg:h-[36px]"
                 />
@@ -1114,21 +1090,23 @@ export const Homepage = () => {
                   />
                 </div>
                 <p className="text-[10px] lg:text-[16px] text-[#797979] mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque tristique tellus nisi feugiat porttitor. At
-                  potenti vel id.
+                  Managing my resources used to be a nightmare, but since I
+                  started using Cueprise, it's been a breeze. The software helps
+                  me schedule tasks, assign team members, and track progress -
+                  which has allowed me to stay on top of everything and avoid
+                  any bottlenecks.
                 </p>
               </div>
               <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
                 <img
-                  src={AyAvatar}
+                  src={Mask4}
                   alt="An avatar for the reviewer"
                   className="w-[24px] h-[24px] lg:w-[36px] lg:h-[36px]"
                 />
 
                 <div className="flex flex-col justify-between">
                   <span className="text-[8px] lg:text-[14px] text-[#64748B] font-semibold">
-                    Owoetoni Ayodele
+                    James Deen
                   </span>
                   <span className="text-[8px] lg:text-[14px] text-[#94A3B8]">
                     Product Designer
@@ -1174,9 +1152,11 @@ export const Homepage = () => {
                   />
                 </div>
                 <p className="text-[10px] lg:text-[16px] text-[#797979] mt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Pellentesque tristique tellus nisi feugiat porttitor. At
-                  potenti vel id.
+                  I started using Cueprise to manage my inventory and it has
+                  completely transformed the way I do business. The automated
+                  ordering processes have saved me so much time, and the ability
+                  to track stock levels in real-time has helped me avoid
+                  stockouts.
                 </p>
               </div>
               <div className="border-t flex items-center mt-4 px-4 py-2 lg:px-8 lg:py-4 gap-6">
