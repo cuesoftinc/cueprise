@@ -1,4 +1,4 @@
-# Simple workflow for Building and Testing site
+# Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
 on:
@@ -38,3 +38,22 @@ jobs:
         with:
           name: build
           path: build
+
+  deploy:
+    needs: build-and-test
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
+      - uses: actions/configure-pages@v1
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: build
+      - id: deployment
+        uses: actions/deploy-pages@main
