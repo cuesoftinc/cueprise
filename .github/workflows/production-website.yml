@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 17.0.1
+          node-version: 18.17.0
           registry-url: https://npm.pkg.github.com/
           cache: "npm"
       - run: npm ci
@@ -46,7 +46,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
-          role-to-assume: arn:aws:iam::${{ secrets.PRODUCTION_CUEPRISE_ACCOUNT_ID }}:role/CICDRole
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/CICDRole
           role-duration-seconds: 1200
       - uses: montudor/action-zip@v1
       - name: Deploy to Amplify
