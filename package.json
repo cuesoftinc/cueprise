@@ -1,12 +1,30 @@
 {
   "name": "cueprise-website",
-  "version": "0.1.0",
+  "version": "1.6.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "predeploy": "npm run build:static",
+    "deploy": "gh-pages -d build",
     "build": "next build",
+    "build:static": "BUILD=static doppler run -- next build",
+    "postbuild:static": "zip -FSr build.zip build/* -x \"*.DS_Store\"",
     "start": "next start",
-    "lint": "next lint"
+    "test": "jest",
+    "test:ci": "jest --ci",
+    "eject": "next eject",
+    "lint": "npm run prettier:check && npm run eslint",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\" \"**/*.tsx\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "eslint": "eslint --report-unused-disable-directives .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "prepare": "husky install || true"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "src/**/*.{js,jsx,ts,tsx,css,scss,html,md}": "prettier --write"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -14,12 +32,20 @@
     "react-dom": "^18",
     "styled-components": "^6.1.8"
   },
+  "bugs": {
+    "url": "https://github.com/CuesoftCloud/cueprise-website/issues"
+  },
+  "homepage": "https://cueprise.com",
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/react": "^14.1.2",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
