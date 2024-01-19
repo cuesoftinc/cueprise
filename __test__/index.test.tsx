@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import '@testing-library/jest-dom';
 import { HomeProvider } from "@/context";
-import "@testing-library/jest-dom"
 import Home from "@/app/page";
 
 
