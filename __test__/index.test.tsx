@@ -1,16 +1,19 @@
 import { render, screen } from "@testing-library/react";
 import { HomeProvider } from "@/context";
-import HeroSection from '../src/components/HeroSection';
+import "@testing-library/jest-dom"
+import Home from "@/app/page";
+
+
 
 describe("Homepage", () => {
-  it("renders a navbar", () => {
+  it("renders a page", () => {
     render(
       <HomeProvider>
-        <HeroSection />
+        <Home />
       </HomeProvider>,
     );
 
-    const Hero_section = screen.getByTestId("hero-section");
-    expect(Hero_section).toBeInTheDocument();
+    const Temp = screen.getByTestId("temp");
+    expect(Temp).toBeInTheDocument();
   });
 })
