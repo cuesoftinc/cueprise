@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import '@testing-library/jest-dom';
 import { HomeProvider } from "@/context";
 import HeroSection from '../src/components/HeroSection';
 
