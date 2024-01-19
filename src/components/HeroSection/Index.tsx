@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Index = () => {
-  return (
-    <section data-testid="hero-section">HeroSection</section>
-  )
-}
+const HeroSection = () => {
+  return <section data-testid="hero-section">HeroSection</section>;
+};
 
-export default Index
+export default HeroSection;
