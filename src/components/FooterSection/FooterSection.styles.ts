@@ -1,20 +1,26 @@
 import Link from "next/link";
 import { styled } from "styled-components";
+import styles from "@/styles/general.styles";
 
 const Footer = styled.footer`
-  position: relative;
   background-color: #2F0658;
-  width: 100% !important;
-  z-index: 10;
   font-family: Inter;
+
+  background-image: url("/footerVector.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  @media (max-width: 912px) {
+    background-position: center;
+    background-size: 500px;
+  }
 `;
 
 const FootWrapper = styled.div`
-  padding-bottom: 50px;
-  width: 100%;
-  position: relative;
-  max-width: 1400px;
-  margin-inline: auto;
+  padding-bottom: 40px;
+  margin: 0 2rem 0 2rem;
   }
 `;
 
@@ -34,23 +40,52 @@ const WaitList = styled.div`
     font-weight: 600;
     line-height: 72px;
     max-width: 75%;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto; 
   }
 
   input {
     background-color: #4d3961;
-    color: #fffff;
+    color: #ffffff;
     border-radius: 5px 0 0 5px;
     height: 3rem;
     border: none;
+    padding: 0 5rem 0 1rem;
   }
 
   button {
     background-color: #ffffff;
-    color: white;
-    height: 3rem;
     border: none;
     border-radius: 0 5px 5px 0;
+    padding: 1rem 3rem 1rem 1.5rem;
+  }
+  button p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20;
+    color: ${styles.color.foundation}
+  }
+  @media (max-width: 769px) {
+    padding: 1rem;
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 100%;
+    }
+
+    input {
+      padding: 0 2rem 0 1rem;
+      height: 2rem;
+    }
+
+    button {
+      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
   }
 `
 
@@ -58,7 +93,10 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
-  margin-inline: auto
+
+  @media (max-width: 769px) {
+    display: block;
+  }
 `;
 
 const LogoCards = styled.div`
@@ -163,9 +201,9 @@ const LinkWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    display: block;
     width: 100%;
-    margin-top: -30px;
+    margin-top: 10px;
   }
 
   @media (max-width: 420px) {
@@ -184,11 +222,13 @@ const LinkContainer = styled.div`
   @media (max-width: 768px) {
     h2 {
       font-size: 20px;
+      margin-top: 1rem;
     }
   }
   @media (max-width: 430px) {
     h2 {
       font-size: 16px;
+      margin-top: 1rem;
     }
   }
 `;
@@ -318,6 +358,10 @@ const BtnWrapper = styled.div`
 
   button span {
     margin: 5px 0px 0px 5px;
+  }
+
+  @media (max-width: 769px) {
+    margin: 0;
   }
 `;
 

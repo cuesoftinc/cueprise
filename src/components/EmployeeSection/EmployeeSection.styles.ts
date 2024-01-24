@@ -7,16 +7,23 @@ export const EmployeeContainer = styled.div`
   align-items: center;
   background-color: white;
   border-radius: 10px;
-  margin: 1rem;
+  margin: 2rem;
   padding: 4rem;
   font-family: Inter;
 
   @media (max-width: 769px) {
     display: block;
+    padding: 2rem;
+    margin: 1rem;
   }
 
   .img {
     order: 1;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .text {

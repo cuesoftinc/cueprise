@@ -7,19 +7,25 @@ export const TaskContainer = styled.div`
   align-items: center;
   background-color: white;
   border-radius: 10px;
-  margin: 1rem;
+  margin: 2rem;
   padding: 4rem;
   font-family: Inter;
-  width: 100%;
   
   @media (max-width: 769px) {
     display: block;
-    padding: 1rem;
+    padding: 2rem;
+    margin: 1rem;
   }
 
   .img {
     display: flex;
     justify-content: flex-end;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
   }
 
   .text {

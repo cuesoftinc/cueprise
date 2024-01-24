@@ -34,7 +34,9 @@ const FooterSection = () => {
           <h2>Get Exciting Update About Cueprise And Productivity</h2>
           <div>
             <input type="email" placeholder="Your email address"></input>
-            <button>Subscribe</button>
+            <button>
+              <p>Subscribe</p>
+            </button>
           </div>
         </WaitList>
         <FooterContainer>

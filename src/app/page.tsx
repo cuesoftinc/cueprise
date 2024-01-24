@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import HeroSection from "../components/HeroSection/Index";
 import DownloadSection from "@/components/DownloadSection/Index";
 import EmployeeSection from "@/components/EmployeeSection/Index";
@@ -8,7 +7,7 @@ import Features from "../components/Features";
 
 export default function Home() {
   return (
-    <main data-testid="temp" className={styles.main} style={{backgroundColor:'#F3F4F6'}}>
+    <main data-testid="temp" style={{backgroundColor:'#F3F4F6'}}>
       <HeroSection />
       <Features />
       <TaskSection />
