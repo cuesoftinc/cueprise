@@ -6,7 +6,7 @@ const styles = {
     gray_600: "#4A5564",
     gray_700: "#374151",
     gray_900: "#1A202C",
-  },
+  }
 }
 
 export default styles;
