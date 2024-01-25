@@ -89,9 +89,13 @@ export const HeroButton = styled.button`
   }
 
   span {
-    background-color: #62BAAC;
-    padding: 0.5rem;
-    border-radius: 1.5rem;
+    display: flex;
+    padding: 0.25rem 0.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 1rem;
+    background: ${styles.color.green};
   }
 `
 

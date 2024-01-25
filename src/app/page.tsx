@@ -4,6 +4,7 @@ import EmployeeSection from "@/components/EmployeeSection/Index";
 import FeedbackSection from "@/components/FeedbackSection/Index";
 import TaskSection from "@/components/TaskSection/Index";
 import Features from "../components/Features";
+import Management from "../components/Management";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <EmployeeSection />
       <DownloadSection />
       <FeedbackSection />
+      <Management />
     </main>
   );
 }
