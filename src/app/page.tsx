@@ -1,4 +1,4 @@
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../components/HeroSection/Index";
 import Features from "../components/Features";
 import Management from "../components/Management";
 
