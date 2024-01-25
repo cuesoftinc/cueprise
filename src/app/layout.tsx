@@ -1,7 +1,8 @@
 import "../styles/globals.css";
 import type { Metadata } from 'next'
 import { HomeProvider } from '@/context'
-import StyledComponentsRegistry from "../lib/registry";
+import StyledComponentsRegistry from "@/lib/registry";
+import FooterSection from "@/components/FooterSection/Index";
 
 export const metadata: Metadata = {
   title: 'Cueprise',
@@ -24,6 +25,7 @@ export default function RootLayout({
       <StyledComponentsRegistry>
         <HomeProvider>
           {children}
+          <FooterSection />
         </HomeProvider>
      </StyledComponentsRegistry>
     </html>
