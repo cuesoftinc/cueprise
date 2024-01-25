@@ -11,11 +11,11 @@ export default function Home() {
     <main data-testid="temp" style={{backgroundColor:'#F3F4F6'}}>
       <HeroSection />
       <Features />
+      <Management />
       <TaskSection />
       <EmployeeSection />
       <DownloadSection />
       <FeedbackSection />
-      <Management />
     </main>
   );
 }
