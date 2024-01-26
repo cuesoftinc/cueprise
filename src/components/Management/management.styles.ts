@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import styles from '@/styles/general.styles';
+import styled from "styled-components";
+import styles from "@/styles/general.styles";
 
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
@@ -11,12 +11,12 @@ export const SectionContainer = styled.section`
 
 export const InnerContainer = styled.div`
   position: relative;
-  width: 100%px;
+  width: 100%;
   display: flex;
   align-items: center;
   height: 95vh;
   background-color: ${styles.color.gray_50};
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   padding: 2.8rem 1rem;
   border-radius: 25px;
 `;
@@ -35,23 +35,22 @@ export const LeftBar = styled.div`
   font-style: normal;
   width: 60%;
 
-  h1{
+  h1 {
     color: #000;
     font-size: 4rem;
     font-weight: 700;
     line-height: 4.8rem;
   }
 
-  p{
+  p {
     color: ${styles.color.gray_600};
     font-size: 1.25rem;
     font-weight: 400;
     line-height: normal;
   }
-  
 `;
 
-export const RightBar = styled.div` 
+export const RightBar = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
