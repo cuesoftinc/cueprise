@@ -1,5 +1,5 @@
-"use client"
-import React from 'react';
+"use client";
+import React from "react";
 import {
   SectionContainer,
   InnerContainer,
@@ -8,8 +8,9 @@ import {
   RightBar,
   TopImage,
   BottomImage,
-  OuterImage
-} from './management.styles';
+  OuterImage,
+} from "./management.styles";
+import { zoomIn } from "@/lib/motion";
 
 const index = () => {
   return (
@@ -25,15 +26,20 @@ const index = () => {
             </p>
           </LeftBar>
           <RightBar>
-            <TopImage src="/iphone.png" alt="phone image" />
+            <TopImage
+              src="/iphone.png"
+              alt="phone image"
+              initial="hidden"
+              variants={zoomIn(0.1, 0.7)}
+              whileInView="show"
+            />
             <BottomImage src="inventories.png" alt="phone image" />
           </RightBar>
         </ContentWrapper>
-        <OuterImage src="cone.png" alt="cone image"/>
+        <OuterImage src="cone.png" alt="cone image" />
       </InnerContainer>
     </SectionContainer>
-  )
-}
+  );
+};
 
 export default index;
-

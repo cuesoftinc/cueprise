@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { staggerContainer, zoomIn } from "@/lib/motion";
 import styles from "@/styles/general.styles";
 
 const Center = styled.div`
@@ -12,7 +11,6 @@ export const SectionWrapper = styled.section`
   position: relative;
   background-color: ${styles.color.gray_100};
   min-height: 100vh;
-  padding: 2rem 2.6rem;
 
   background-image: url("/spectrum.png");
   background-position: center;
@@ -24,10 +22,6 @@ export const SectionWrapper = styled.section`
   @media (max-width: 912px) {
     background-position: center;
     background-size: 500px;
-  }
-
-  @media (max-width: 640px) {
-    padding: 1rem;
   }
 `;
 
@@ -107,8 +101,12 @@ export const NavButton = styled.button`
 export const HeroContainer = styled(Center)`
   flex-direction: column;
   margin: 4rem 0;
-  padding: 2rem 0;
+  padding: 2rem 2.6rem;
   font-family: "Inter", sans-serif;
+
+  @media (max-width: 640px) {
+    padding: 0.5rem;
+  }
 `;
 
 export const HeroText_Wrapper = styled(Center)`
@@ -212,11 +210,15 @@ export const Hero_Subtext = styled.p`
   @media screen and (max-width: 768px) {
     font-size: 1rem;
   }
+
+  @media screen and (max-width: 640px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const ImageWrapper = styled.div`
   position: relative;
-  margin-top: 3rem;
+  margin-top: 7vh;
   padding: 0 1rem;
 `;
 
@@ -283,7 +285,7 @@ export const MobileNavLinks = styled.div`
   margin-top: 4rem;
 `;
 
-export const MobileNavLink = styled(NavLink)`
+export const MobileNavLink = styled.a`
   display: inline-block;
   padding: 1rem;
   text-decoration: none;
@@ -292,7 +294,7 @@ export const MobileNavLink = styled(NavLink)`
   cursor: pointer;
 
   &:hover {
-    background-color: #f3f4f6;
+    background-color: #f2ebf9;
     border-radius: 10px;
   }
 `;
@@ -314,6 +316,7 @@ export const MobileNavButton = styled.button`
   border: none;
   background-color: ${styles.color.purple_400};
   border-radius: 0.3rem;
+  margin-top: 1.5rem;
   cursor: pointer;
   display: block;
 

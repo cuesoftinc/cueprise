@@ -7,6 +7,7 @@ import {
   Header,
   MobileNavLinks,
   MobileNavLink,
+  MobileNavButton,
   Icon,
 } from "./HeroSection.styles";
 import { FaTimes } from "react-icons/fa";
@@ -34,6 +35,7 @@ const MobileNavBar = ({ setIsNavOpen }: Props) => {
             </MobileNavLink>
           ))}
         </MobileNavLinks>
+        <MobileNavButton>Try for free</MobileNavButton>
       </MobileNavContainer>
     </Container>
   );

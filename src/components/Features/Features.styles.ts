@@ -17,9 +17,9 @@ export const SectionContainer = styled.section`
     background-size: 500px;
   }
 
-  @media (max-width: 640px) {
+  /* @media (max-width: 640px) {
     padding: 1rem;
-  }
+  } */
 `;
 
 export const Inner_wrapper = styled.div`
@@ -30,13 +30,21 @@ export const Inner_wrapper = styled.div`
 
 export const Section = styled.span`
   display: flex;
-  width: 6.875rem;
+  width: fit-content;
   padding: 0.25rem 0.625rem;
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
   border-radius: 1rem;
   background-color: ${styles.color.green};
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 0.875rem;
+  }
 `;
 export const Header_wrapper = styled.div`
   display: flex;
@@ -51,6 +59,10 @@ export const Header = styled.h1`
   font-size: 2.5rem;
   font-weight: 700;
   line-height: normal;
+
+  @media (max-width: 640px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Subtext = styled.p`
@@ -58,6 +70,14 @@ export const Subtext = styled.p`
   font-size: 1.25rem;
   font-weight: 400;
   line-height: normal;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const CardsContainer = styled.div`
