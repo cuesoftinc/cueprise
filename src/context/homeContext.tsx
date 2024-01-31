@@ -6,7 +6,7 @@ import { createContext, useContext, useState } from "react";
 const HomeContext = createContext<HomeContextProps | undefined>(undefined);
 
 export const HomeProvider = ({ children }: HomeProviderProps) => {
-  const [homeState, setHomeState] = useState<number>(2);
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
   const [newString, setNewString] = useState<string>("Testing for string");
 
   const handleSubmit = (e: any, form: any) => {
@@ -15,7 +15,7 @@ export const HomeProvider = ({ children }: HomeProviderProps) => {
 
   return (
     <HomeContext.Provider
-      value={{ homeState, setHomeState, newString, setNewString, handleSubmit }}
+      value={{ isNavOpen, setIsNavOpen, newString, setNewString, handleSubmit }}
     >
       {children}
     </HomeContext.Provider>
