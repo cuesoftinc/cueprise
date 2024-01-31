@@ -20,8 +20,13 @@ export const InnerContainer = styled.div`
   display: flex;
   align-items: center;
   height: 95vh;
+<<<<<<< HEAD
+  background-color: #FFFFFF;
+  margin: 2rem 0;
+=======
   background-color: ${styles.color.gray_50};
   margin: 2rem 0 0 0;
+>>>>>>> 9403f97e265984a8acd8d55439eccb126d634089
   padding: 2.8rem 1rem;
   border-radius: 25px;
 

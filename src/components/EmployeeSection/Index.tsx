@@ -1,22 +1,46 @@
 "use client"
 
-import Image from 'next/image';
 import React from 'react';
-import EmployeeStatistics from '@/assets/images/employeeStatistics.png'
-import { EmployeeContainer } from './EmployeeSection.styles';
+import {
+  SectionContainer,
+  InnerContainer,
+  ContentWrapper,
+  LeftBar,
+  RightBar,
+  TopImage,
+  BottomImage,
+  OuterImage
+} from './EmployeeSection.styles';
+import { motion } from 'framer-motion';
+import { zoomIn } from "@/lib/motion";
 
-const EmployeeSection = () => {
+
+const Index = () => {
   return (
-    <EmployeeContainer>
-      <div className='text'>
-        <h1>Employee Statistics</h1>
-        <p>These statistics provide insights into various aspects of employee demographics, performance, and engagement.</p>
-      </div>
-      <div className='img'>
-        <Image alt='' src={EmployeeStatistics} />
-      </div>
-    </EmployeeContainer>
+    <SectionContainer>
+      <InnerContainer>
+        <ContentWrapper>
+          <LeftBar>
+          <h1>Employee Statistics</h1>
+          <p>These statistics provide insights into various aspects of employee demographics, performance, and engagement.</p>
+          </LeftBar>
+          <RightBar>
+            <TopImage
+              src="employeeStatistics2.png" 
+              alt=""
+              initial="hidden"
+              variants={zoomIn(0.1, 1.2)}
+              whileInView="show"
+            />
+            <BottomImage src="employeeStatistics1.png" alt="" />
+          </RightBar>
+          <OuterImage src="cone.png" alt="cone image"/>
+        </ContentWrapper>
+      </InnerContainer>
+    </SectionContainer>
   )
 }
 
-export default EmployeeSection
+export default Index;
+
+

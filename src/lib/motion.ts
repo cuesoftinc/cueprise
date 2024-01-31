@@ -31,3 +31,37 @@ export const zoomIn = (delay: number, duration: number) => {
     },
   };
 };
+
+export const slideInLeft = (delay: number, duration: number) => {
+  return {
+    hidden: {
+      x: "-100%",
+    },
+    show: {
+      x: 0,
+      transition: {
+        type: "tween",
+        delay: delay,
+        duration: duration,
+        ease: "easeOut",
+      },
+    },
+  };
+};
+
+export const slideInRight = (delay: number, duration: number) => {
+  return {
+    hidden: {
+      x: "100%",
+    },
+    show: {
+      x: 0,
+      transition: {
+        type: "tween",
+        delay: delay,
+        duration: duration,
+        ease: "easeOut",
+      },
+    },
+  };
+};

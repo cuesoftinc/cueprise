@@ -1,37 +1,57 @@
 import { styled } from "styled-components";
-import styles from "@/styles/general.styles"
+import styles from "@/styles/general.styles";
+import { motion } from "framer-motion";
 
-export const TaskContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  background-color: white;
-  border-radius: 10px;
+export const SectionContainer = styled.section`
+  background-color: ${styles.color.gray_100};
+  overflow: hidden;
   margin: 2rem;
-  padding: 4rem;
   font-family: Inter;
-  
+
+  @media (max-width: 769px) {
+    margin: 1rem;
+  }
+`;
+
+export const InnerContainer = styled.div`
+  position: relative;
+  width: 100%px;
+  display: flex;
+  align-items: center;
+  height: 95vh;
+  background-color: #FFFFFF;
+  padding: 4rem;
+  border-radius: 25px;
+
   @media (max-width: 769px) {
     display: block;
     padding: 2rem;
-    margin: 1rem;
+    height: 110vh;
   }
+`;
 
-  .img {
-    display: flex;
-    justify-content: flex-end;
+export const ContentWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
+  @media (max-width: 769px) {
+    display: block;
   }
+`;
 
-  .text {
-    @media (max-width: 769px) {
-      text-align: center;
-    }
+export const LeftBar = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Inter" sans-serif;
+  font-style: normal;
+  width: 60%;
+
+  @media (max-width: 769px) {
+    display: block;
+    width: 100%;
+    text-align: center;
   }
 
   h1 {
@@ -51,10 +71,58 @@ export const TaskContainer = styled.div`
     line-height: 24.2px;
     font-weight: 400;
     color: ${styles.color.gray_600};
+    max-width: 80%;
 
     @media (max-width: 769px) {
       font-size: 16px;
       line-height: 24px;
+      max-width: 100%;
     }
+  }
+  
+`;
+
+export const RightBar = styled.div` 
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 40%;
+
+  @media (max-width: 769px) {
+    width: 100%;
+    margin: 6rem 0;
+  }
+`;
+
+export const BottomImage = styled.img`
+  position: relative;
+  margin: 0 1rem;
+  z-index: 5;
+
+  @media (max-width: 769px) {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+export const TopImage = styled(motion.img)`
+  position: absolute;
+  top: -15%;
+  right: -1rem;
+  z-index: 10;
+
+  @media (max-width: 769px) {
+    width: 80%;
+  }
+`;
+
+export const OuterImage = styled.img`
+  position: absolute;
+  top: 6%;
+  right: 33.3%;
+  z-index: 20;
+
+  @media (max-width: 769px) {
+    display: none;
   }
 `;
