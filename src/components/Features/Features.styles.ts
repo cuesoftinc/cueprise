@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import styles from "@/styles/general.styles";
+import { motion } from "framer-motion";
 
 export const SectionContainer = styled.section`
   min-height: 100vh;
@@ -14,6 +15,10 @@ export const SectionContainer = styled.section`
   @media (max-width: 912px) {
     background-position: center;
     background-size: 500px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 1rem;
   }
 `;
 
@@ -60,6 +65,14 @@ export const CardsContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   margin-top: 70px;
   gap: 1rem;
+
+  @media screen and (max-width: 912px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 // ------ Features card styles -----
