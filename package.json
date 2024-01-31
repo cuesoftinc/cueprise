@@ -27,6 +27,7 @@
     "src/**/*.{js,jsx,ts,tsx,css,scss,html,md}": "prettier --write"
   },
   "dependencies": {
+    "framer-motion": "^11.0.3",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",

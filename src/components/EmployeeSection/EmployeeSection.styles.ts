@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import styles from '@/styles/general.styles'
+import styles from "@/styles/general.styles";
 
 export const EmployeeContainer = styled.div`
   display: grid;
@@ -19,7 +19,7 @@ export const EmployeeContainer = styled.div`
 
   .img {
     order: 1;
-    
+
     img {
       max-width: 100%;
       height: auto;
@@ -50,11 +50,11 @@ export const EmployeeContainer = styled.div`
     font-size: 20px;
     line-height: 24.2px;
     font-weight: 400;
-    color: ${styles.color.gray_600}
+    color: ${styles.color.gray_600};
 
     @media (max-width: 769px) {
       font-size: 16px;
       line-height: 10px;
     }
   }
-`
+`;
