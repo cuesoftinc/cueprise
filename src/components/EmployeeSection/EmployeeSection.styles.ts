@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
-import styles from "@/styles/general.styles"
+import styles from "@/styles/general.styles";
+import { motion } from "framer-motion";
 
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
@@ -109,7 +110,7 @@ export const BottomImage = styled.img`
   }
 `;
 
-export const TopImage = styled.img`
+export const TopImage = styled(motion.img)`
   position: absolute;
   top: 18%;
   right: -36%;

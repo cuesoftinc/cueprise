@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import styles from "@/styles/general.styles"
+import { motion } from "framer-motion";
 
 export const FeedbackContainer = styled.div`
   font-family: Inter;
@@ -48,10 +49,9 @@ export const FeedbackContent = styled.div`
   }
 `
 
-export const Feedback = styled.div`
+export const Feedback = styled(motion.div)`
   display: flex;
   gap: 3rem;
-  // transform: translateX(50px);
 
   .rating {
     margin-top: 1rem;

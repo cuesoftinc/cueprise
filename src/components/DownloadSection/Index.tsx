@@ -23,7 +23,7 @@ const DownloadSection = () => {
       }
     };
 
-    controls.start(isInView ? { y: 0, transition: { duration: 0.8, ease: 'easeInOut' } } : { y: '100%' });
+    controls.start(isInView ? { y: 0, transition: { duration: 0.8, ease: 'easeOut' } } : { y: '100%' });
 
     window.addEventListener('scroll', handleScroll);
     return () => {

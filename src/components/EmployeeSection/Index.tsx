@@ -11,8 +11,11 @@ import {
   BottomImage,
   OuterImage
 } from './EmployeeSection.styles';
+import { motion } from 'framer-motion';
+import { zoomIn } from "@/lib/motion";
 
-const index = () => {
+
+const Index = () => {
   return (
     <SectionContainer>
       <InnerContainer>
@@ -22,7 +25,13 @@ const index = () => {
           <p>These statistics provide insights into various aspects of employee demographics, performance, and engagement.</p>
           </LeftBar>
           <RightBar>
-            <TopImage src="employeeStatistics2.png" alt="" />
+            <TopImage
+              src="employeeStatistics2.png" 
+              alt=""
+              initial="hidden"
+              variants={zoomIn(0.1, 1.2)}
+              whileInView="show"
+            />
             <BottomImage src="employeeStatistics1.png" alt="" />
           </RightBar>
           <OuterImage src="cone.png" alt="cone image"/>
@@ -32,6 +41,6 @@ const index = () => {
   )
 }
 
-export default index;
+export default Index;
 
 
