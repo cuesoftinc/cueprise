@@ -12,6 +12,7 @@ export const SectionWrapper = styled.section`
   position: relative;
   background-color: ${styles.color.gray_100};
   min-height: 100vh;
+  padding: 2rem 2.6rem;
 
   background-image: url("/spectrum.png");
   background-position: center;
@@ -19,9 +20,14 @@ export const SectionWrapper = styled.section`
   background-size: contain;
   overflow: hidden;
   width: 100%;
+
   @media (max-width: 912px) {
     background-position: center;
     background-size: 500px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 1rem;
   }
 `;
 
