@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import styles from '@/styles/general.styles';
+import styled from "styled-components";
+import styles from "@/styles/general.styles";
 
 export const SectionContainer = styled.section`
   min-height: 100vh;
@@ -59,7 +59,7 @@ export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 70px;
-  gap: 1.4rem;
+  gap: 1rem;
 `;
 
 // ------ Features card styles -----
@@ -86,13 +86,11 @@ export const IconOverlay = styled.span`
   background-color: ${styles.color.purple_50};
 `;
 
-export const Icon = styled.img`
-
-`;
+export const Icon = styled.img``;
 
 export const CardHeader = styled.h3`
   color: ${styles.color.purple_400};
-  font-family:" Manrope" sans-serif;
+  font-family: " Manrope" sans-serif;
   font-size: 1.25rem;
   font-style: normal;
   font-weight: 700;
@@ -100,10 +98,10 @@ export const CardHeader = styled.h3`
 `;
 
 export const CardText = styled.p`
-  color: var(--Foundation-Blue-blue-300, #6A597A);
+  color: var(--Foundation-Blue-blue-300, #6a597a);
   font-family: "Inter" sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.5rem; 
+  line-height: 1.5rem;
 `;

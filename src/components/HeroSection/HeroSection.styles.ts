@@ -24,7 +24,7 @@ export const SectionWrapper = styled.section`
 
 export const Logo = styled.img`
   width: 120px;
-`
+`;
 
 export const NavBar = styled.nav`
   display: flex;
@@ -33,7 +33,7 @@ export const NavBar = styled.nav`
   background-color: ${styles.color.gray_100};
   padding: 2.06rem 2.2rem;
   border-bottom: 0.5px solid ${styles.color.gray_300};
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
 `;
 
 export const NavLinks = styled(Center)`
@@ -43,9 +43,13 @@ export const NavLinks = styled(Center)`
 export const NavLink = styled.a`
   display: inline-block;
   text-decoration: none;
-  color:  ${styles.color.gray_900};
+  color: ${styles.color.gray_900};
   font-weight: 700;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const NavButton = styled.button`
@@ -66,7 +70,7 @@ export const HeroContainer = styled(Center)`
   flex-direction: column;
   margin: 4rem 0;
   padding: 2rem 0;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 `;
 
 export const HeroText_Wrapper = styled(Center)`
@@ -81,7 +85,7 @@ export const HeroButton = styled.button`
   border: none;
   padding: 0.5rem;
   border-radius: 1.5rem;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
 
   > p {
@@ -97,7 +101,7 @@ export const HeroButton = styled.button`
     border-radius: 1rem;
     background: ${styles.color.green};
   }
-`
+`;
 
 export const Hero_HeaderText = styled.div`
   h1 {
@@ -149,7 +153,11 @@ export const ImageWrapper = styled.div`
 export const Overlay = styled.div`
   position: absolute;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(243, 244, 246, 0.5), rgba(243, 244, 246, 0.9));
+  background: linear-gradient(
+    to bottom,
+    rgba(243, 244, 246, 0.5),
+    rgba(243, 244, 246, 0.9)
+  );
   height: 70px;
   opacity: 0.9;
   bottom: 0;
