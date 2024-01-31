@@ -11,7 +11,7 @@ export const DownloadContainer = styled.div`
   background-size: cover;
   overflow: hidden;
   border: solid 1px ${styles.color.gray_200};
-  border-radius: 10px;
+  border-radius: 25px;
   margin: 8rem 2rem 2rem 2rem;
   padding: 4rem 4rem 0 4rem;
   font-family: Inter;
@@ -80,6 +80,10 @@ export const DownloadContent = styled.div`
     margin-top: 2rem;
   }
 
+  .mobile-badge {
+    display: none;
+  }
+
   @media (max-width: 769px) {
     display: block;
     padding: 2rem;
@@ -93,4 +97,30 @@ export const DownloadContent = styled.div`
       font-size: 16px;
       margin-bottom: 2rem;
     }
+    .mobile-badge {
+      display: block;
+      width: 14rem;
+      height: auto;
+      margin: 1rem auto;
+
+      img {
+        margin: 1rem 0;
+        width: 100%;
+        height: auto;
+      }
+    }
+`
+export const DownloadStore = styled.div`
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+  
+
+  @media (max-width: 769px) {
+    display: block;
+
+    img {
+      display: none;
+    }
+  }
 `

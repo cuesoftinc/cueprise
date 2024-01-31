@@ -51,6 +51,7 @@ export const FeedbackContent = styled.div`
 export const Feedback = styled.div`
   display: flex;
   gap: 3rem;
+  // transform: translateX(50px);
 
   .rating {
     margin-top: 1rem;

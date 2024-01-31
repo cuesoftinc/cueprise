@@ -1,13 +1,15 @@
 "use client"
 
-import React from 'react'
+import React, {useRef} from 'react'
 import { FeedbackContainer, FeedbackContent, Feedback } from './FeedbackSection.styles'
 import Image from 'next/image'
 import user1 from '@/assets/images/user1.png';
 import user2 from '@/assets/images/user2.png';
 import { IoMdStar } from "react-icons/io";
+import { useScroll, motion } from 'framer-motion';
 
 const FeedbackSection = () => {
+
   const feedbackData = [
     { userImage: user1, 
       userName: 'Ibukun Dairo', 
@@ -24,11 +26,17 @@ const FeedbackSection = () => {
   },
   ];
 
+  const ref = useRef<HTMLElement>(null);
+  const scrollYProgress  = useScroll()
+  useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  })
+
   return (
     <FeedbackContainer>
       <h1 className="title">Review</h1>
       <h2>What Are Our Users Saying About Us</h2>
-
       <FeedbackContent>
         {feedbackData.map((feedback, index) => (
           <Feedback key={index}>
