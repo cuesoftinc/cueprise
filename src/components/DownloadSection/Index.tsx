@@ -23,7 +23,7 @@ const DownloadSection = () => {
       }
     };
 
-    controls.start(isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 });
+    controls.start(isInView ? { y: 0, transition: { duration: 0.8, ease: 'easeInOut' } } : { y: '100%' });
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -48,7 +48,7 @@ const DownloadSection = () => {
         <motion.div
           className='img'
           animate={controls}
-          initial={{ opacity: 0, scale: 0.5 }}
+          initial={{ y: '100%' }}
           ref={imageRef}
         >
           <Image src={DownloadCueprise} alt='download image' />
