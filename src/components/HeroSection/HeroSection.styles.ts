@@ -42,6 +42,7 @@ export const NavBar = styled.nav`
     font-size: 25px;
     display: none;
     cursor: pointer;
+    color: ${styles.color.purple_400};
   }
 
   @media (max-width: 912px) {
@@ -137,6 +138,18 @@ export const HeroButton = styled.button`
     border-radius: 1rem;
     background: ${styles.color.green};
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 0.875rem;
+
+    p {
+      font-size: 0.75rem;
+    }
+  }
 `;
 
 export const Hero_HeaderText = styled.div`
@@ -192,10 +205,6 @@ export const CustomImage = styled.img`
   @media screen and (max-width: 768px) {
     width: 70%;
   }
-
-  /* @media screen and (max-width: 640px) {
-    width: 50%;
-  } */
 `;
 
 export const Hero_Subtext = styled.p`
@@ -209,10 +218,6 @@ export const Hero_Subtext = styled.p`
 
   @media screen and (max-width: 768px) {
     font-size: 1rem;
-  }
-
-  @media screen and (max-width: 640px) {
-    font-size: 0.875rem;
   }
 `;
 
@@ -274,6 +279,7 @@ export const Header = styled.div`
   .close__nav {
     font-size: 25px;
     cursor: pointer;
+    color: ${styles.color.purple_400};
   }
 `;
 
