@@ -10,7 +10,7 @@ export const SectionContainer = styled.section`
   width: 100%;
 
   @media screen and (max-width: 640px) {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 `;
 
@@ -18,31 +18,20 @@ export const InnerContainer = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  align-items: center;
-  height: 95vh;
-<<<<<<< HEAD
-  background-color: #FFFFFF;
-  margin: 2rem 0;
-=======
+  min-height: 95vh;
   background-color: ${styles.color.gray_50};
   margin: 2rem 0 0 0;
->>>>>>> 9403f97e265984a8acd8d55439eccb126d634089
   padding: 2.8rem 1rem;
   border-radius: 25px;
 
-  @media screen and (max-width: 640px) {
-    align-items: start;
-  }
-
   @media screen and (max-width: 912px) {
-    height: fit-content;
+    flex-direction: column;
   }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   gap: 2rem;
 
   @media screen and (max-width: 912px) {
@@ -53,7 +42,8 @@ export const ContentWrapper = styled.div`
 export const LeftBar = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+  justify-content: center;
   font-family: "Inter" sans-serif;
   font-style: normal;
   width: 60%;
@@ -79,13 +69,13 @@ export const LeftBar = styled.div`
     h1,
     p {
       text-align: center;
+      line-height: normal;
     }
   }
 
   @media screen and (max-width: 768px) {
     h1 {
       font-size: 2.5rem;
-      line-height: 1rem;
     }
 
     p {
@@ -94,12 +84,10 @@ export const LeftBar = styled.div`
   }
 
   @media screen and (max-width: 640px) {
-    padding: 0 1.5rem;
-    padding-right: 2.5rem;
+    padding: 0 1rem;
 
     h1 {
       font-size: 6vw;
-      line-height: 2.5rem;
     }
 
     p {

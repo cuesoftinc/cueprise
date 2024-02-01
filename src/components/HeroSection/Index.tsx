@@ -89,22 +89,4 @@ const HeroSection = () => {
   );
 };
 
-// const HeroSection = () => {
-//   return (
-//     <div>
-//       <motion.p
-//         // src="/hero-image.png"
-//         // alt="hero image"
-//         initial={{ x: 100 }}
-//         animate={{ x: 0}}
-//         whileHover={{ scale: 1.2 }}
-//         // whileHover={{ scale: 1.1 }}
-//         // variants={zoomIn(0.1, 0.7)}
-//         // initial="hidden"
-//         // whileInView="show"
-//       >Hello there</motion.p>
-//     </div>
-//   )
-// }
-
 export default HeroSection;

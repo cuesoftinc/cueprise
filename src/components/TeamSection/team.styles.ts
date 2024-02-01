@@ -11,20 +11,28 @@ import {
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
   min-height: 100vh;
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
   overflow: hidden;
   width: 100%;
+
+  @media screen and (max-width: 640px) {
+    padding: 1rem;
+  }
 `;
 
 export const InnerContainer = styled.div`
   position: relative;
   width: 100%;
   display: flex;
-  align-items: center;
-  height: 100vh;
+  min-height: 95vh;
   background-color: ${styles.color.gray_50};
-  padding: 0 1rem;
+  margin: 2rem 0 0 0;
+  padding: 2.8rem 0;
   border-radius: 25px;
+
+  @media screen and (max-width: 912px) {
+    margin: 0.5rem 0 0 0;
+  }
 `;
 
 export const CustomContentWrapper = styled(ContentWrapper)`
@@ -44,13 +52,13 @@ export const CustomLeftBar = styled(LeftBar)`
     h1,
     p {
       text-align: center;
+      line-height: normal;
     }
   }
 
   @media screen and (max-width: 768px) {
     h1 {
       font-size: 2.5rem;
-      line-height: 3rem;
     }
 
     p {
@@ -59,12 +67,8 @@ export const CustomLeftBar = styled(LeftBar)`
   }
 
   @media screen and (max-width: 640px) {
-    padding: 0 1.5rem;
-    padding-right: 2.5rem;
-
     h1 {
       font-size: 6vw;
-      line-height: 2.5rem;
     }
 
     p {
