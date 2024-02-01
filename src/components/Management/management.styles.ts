@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import styles from "@/styles/general.styles";
+import { motion } from "framer-motion";
 
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
@@ -7,6 +8,10 @@ export const SectionContainer = styled.section`
   padding: 2rem 1.5rem;
   overflow: hidden;
   width: 100%;
+
+  @media screen and (max-width: 640px) {
+    padding: 1rem 1rem;
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -24,12 +29,25 @@ export const InnerContainer = styled.div`
 >>>>>>> 9403f97e265984a8acd8d55439eccb126d634089
   padding: 2.8rem 1rem;
   border-radius: 25px;
+
+  @media screen and (max-width: 640px) {
+    align-items: start;
+  }
+
+  @media screen and (max-width: 912px) {
+    height: fit-content;
+  }
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 2rem;
+
+  @media screen and (max-width: 912px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftBar = styled.div`
@@ -53,6 +71,41 @@ export const LeftBar = styled.div`
     font-weight: 400;
     line-height: normal;
   }
+
+  @media screen and (max-width: 912px) {
+    width: 100%;
+    padding: 0 2rem;
+
+    h1,
+    p {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+      line-height: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 0 1.5rem;
+    padding-right: 2.5rem;
+
+    h1 {
+      font-size: 6vw;
+      line-height: 2.5rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+  }
 `;
 
 export const RightBar = styled.div`
@@ -60,19 +113,33 @@ export const RightBar = styled.div`
   justify-content: center;
   position: relative;
   width: 40%;
+
+  @media screen and (max-width: 912px) {
+    width: 100%;
+  }
 `;
 
 export const BottomImage = styled.img`
   position: relative;
   margin: 0 1rem;
   z-index: 5;
+
+  @media screen and (max-width: 912px) {
+    width: fit-content;
+  }
 `;
 
-export const TopImage = styled.img`
+export const TopImage = styled(motion.img)`
   position: absolute;
   top: 30%;
   left: -1rem;
   z-index: 10;
+
+  @media screen and (max-width: 912px) {
+    width: 98%;
+    top: 25%;
+    left: 0.5rem;
+  }
 `;
 
 export const OuterImage = styled.img`
@@ -80,4 +147,9 @@ export const OuterImage = styled.img`
   top: 0;
   right: 33%;
   z-index: 20;
+  display: block;
+
+  @media screen and (max-width: 912px) {
+    display: none;
+  }
 `;

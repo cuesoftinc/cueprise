@@ -78,10 +78,7 @@ const HeroSection = () => {
             src="/hero-image.png"
             alt="hero image"
             initial="hidden"
-            // animate={{ opacity: 1, scale: 1 }}
-            // whileHover={{ scale: 1.1 }}
             variants={zoomIn(0.1, 0.7)}
-            // initial="hidden"
             whileInView="show"
           />
           <Overlay />

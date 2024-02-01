@@ -16,8 +16,8 @@ export const staggerContainer = (
 export const zoomIn = (delay: number, duration: number) => {
   return {
     hidden: {
-      scale: 0,
-      opacity: 0,
+      scale: 0.7,
+      opacity: 0.7,
     },
     show: {
       scale: 1,
