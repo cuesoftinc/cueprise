@@ -32,7 +32,7 @@ export const Features_data: FeatureData[] = [
   },
   {
     iconSrc: "/sales.png",
-    header: "sales",
+    header: "Sales",
     sub_text: "You can elevate your sales strategy with cutting edge tools, fostering seamless processes and enhancing overall efficiency for your business and unprecedented business growth.",
   },
   {
@@ -42,7 +42,7 @@ export const Features_data: FeatureData[] = [
   },
   {
     iconSrc: "/project-management.png",
-    header: "project management",
+    header: "Project management",
     sub_text: "Empower your project management endeavors with sophisticated tools,facilitating seamless collaboration,organization and unparalleled efficiency for successful projects.",
   }
 ]

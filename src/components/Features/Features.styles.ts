@@ -5,13 +5,14 @@ import { motion } from "framer-motion";
 export const SectionContainer = styled.section`
   min-height: 100vh;
   background-color: ${styles.color.gray_100};
-  padding: 2rem 2.6rem;
+  padding: 2rem;
   background-image: url("/spiral.png");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
   overflow: hidden;
   width: 100%;
+  font-family: Inter;
   @media (max-width: 912px) {
     background-position: center;
     background-size: 500px;

@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
   min-height: 100vh;
-  padding: 2rem 1.5rem;
+  padding: 2rem;
   overflow: hidden;
   width: 100%;
+  font-family: Inter;
 
   @media screen and (max-width: 640px) {
     padding: 1rem;
@@ -19,7 +20,7 @@ export const InnerContainer = styled.div`
   width: 100%;
   display: flex;
   min-height: 95vh;
-  background-color: ${styles.color.gray_50};
+  background-color: #FFFFFF;
   margin: 2rem 0 0 0;
   padding: 2.8rem 1rem;
   border-radius: 25px;
