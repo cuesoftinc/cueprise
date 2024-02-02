@@ -1,6 +1,6 @@
-"use client"
-import React from 'react';
-import { FeatureData, Features_data } from './data';
+"use client";
+import React from "react";
+import { FeatureData, Features_data } from "./data";
 import {
   SectionContainer,
   Inner_wrapper,
@@ -14,10 +14,9 @@ import {
   Icon,
   CardHeader,
   CardText,
-} from './Features.styles';
+} from "./Features.styles";
 
-
-const FeaturesCard = ({header, sub_text, iconSrc}: FeatureData) => {
+const FeaturesCard = ({ header, sub_text, iconSrc }: FeatureData) => {
   return (
     <CardContainer>
       <IconOverlay>
@@ -26,19 +25,19 @@ const FeaturesCard = ({header, sub_text, iconSrc}: FeatureData) => {
       <CardHeader>{header}</CardHeader>
       <CardText>{sub_text}</CardText>
     </CardContainer>
-  )
+  );
 };
 
 const Index = () => {
   return (
-    <SectionContainer>
+    <SectionContainer id="Features">
       <Inner_wrapper>
         <Section>Features</Section>
         <Header_wrapper>
           <Header>Cueprise Solutions For Your Business</Header>
           <Subtext>
-            Boost efficiency and cut costs with 
-            Cueprice’s intuitive business tools
+            Boost efficiency and cut costs with Cueprice’s intuitive business
+            tools
           </Subtext>
         </Header_wrapper>
         <CardsContainer>
@@ -48,8 +47,7 @@ const Index = () => {
         </CardsContainer>
       </Inner_wrapper>
     </SectionContainer>
-  )
-}
+  );
+};
 
 export default Index;
-

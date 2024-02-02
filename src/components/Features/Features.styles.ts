@@ -17,9 +17,9 @@ export const SectionContainer = styled.section`
     background-size: 500px;
   }
 
-  /* @media (max-width: 640px) {
-    padding: 1rem;
-  } */
+  @media (max-width: 640px) {
+    padding: 1.5rem;
+  }
 `;
 
 export const Inner_wrapper = styled.div`
