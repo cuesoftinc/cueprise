@@ -165,6 +165,7 @@ export const Hero_HeaderText = styled.div`
   div {
     display: flex;
     justify-content: center;
+    width: 100%;
     gap: 2rem;
   }
 
@@ -198,12 +199,22 @@ export const Hero_HeaderText = styled.div`
       font-size: 6vw;
       line-height: 2.5rem;
     }
+
+    div {
+      gap: 1rem;
+      align-items: center;
+      transform: translateX(20px);
+    }
   }
 `;
 
 export const CustomImage = styled.img`
   @media screen and (max-width: 768px) {
     width: 70%;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 50%;
   }
 `;
 

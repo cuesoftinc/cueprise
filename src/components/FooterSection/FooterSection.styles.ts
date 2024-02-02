@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { styled } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import styles from "@/styles/general.styles";
 
 const Footer = styled.footer`
-  background-color: #2F0658;
+  background-color: #2f0658;
   font-family: Inter;
 
   background-image: url("/footerVector.png");
@@ -40,7 +40,7 @@ const WaitList = styled.div`
     font-weight: 600;
     line-height: 72px;
     max-width: 75%;
-    margin: 0 auto 3rem auto; 
+    margin: 0 auto 3rem auto;
   }
 
   input {
@@ -57,12 +57,17 @@ const WaitList = styled.div`
     border: none;
     border-radius: 0 5px 5px 0;
     padding: 1rem 3rem 1rem 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
   button p {
     text-align: center;
     font-weight: 600;
     font-size: 20;
-    color: ${styles.color.foundation}
+    color: ${styles.color.foundation};
   }
   @media (max-width: 769px) {
     padding: 1rem;
@@ -87,7 +92,7 @@ const WaitList = styled.div`
       padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     }
   }
-`
+`;
 
 const FooterContainer = styled.div`
   display: flex;
@@ -186,7 +191,7 @@ const Address = styled.div`
     flex-direction: column;
     gap: 40px;
   }
-`
+`;
 
 const LinkWrapper = styled.div`
   display: flex;
@@ -365,6 +370,21 @@ const BtnWrapper = styled.div`
   }
 `;
 
+const spin = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
+const Spinner = styled.div`
+  box-shadow: inset 0 0 5px 0px #00000080;
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  border-top: 2px solid #9861d0;
+  animation: ${spin} 1s linear infinite;
+`;
+
 export {
   Footer,
   FootWrapper,
@@ -380,5 +400,6 @@ export {
   NavWrapper,
   CopyrightWrapper,
   SocialMediaContainer,
-  BtnWrapper
+  BtnWrapper,
+  Spinner,
 };
