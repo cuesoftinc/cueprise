@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "doppler run -- next dev",
     "predeploy": "npm run build:static",
     "deploy": "gh-pages -d build",
     "build": "next build",

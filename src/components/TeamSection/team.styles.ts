@@ -48,6 +48,7 @@ export const CustomLeftBar = styled(LeftBar)`
 
   @media screen and (max-width: 912px) {
     width: 100%;
+    padding: 0 2rem;
 
     h1,
     p {
@@ -67,6 +68,8 @@ export const CustomLeftBar = styled(LeftBar)`
   }
 
   @media screen and (max-width: 640px) {
+    padding: 0 2rem;
+
     h1 {
       font-size: 6vw;
     }

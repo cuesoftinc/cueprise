@@ -36,7 +36,9 @@ const HeroSection = () => {
         <Logo src="/logo.png" alt="company logo" />
         <NavLinks>
           {links.map((link) => (
-            <NavLink key={link}>{link}</NavLink>
+            <NavLink key={link} href={`#${link}`}>
+              {link}
+            </NavLink>
           ))}
         </NavLinks>
         <NavButton>Try For Free</NavButton>
