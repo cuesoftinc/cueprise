@@ -5,13 +5,14 @@ import { motion } from "framer-motion";
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
   min-height: 100vh;
-  padding: 2rem;
   overflow: hidden;
+  margin: 2rem 0;
   width: 100%;
   font-family: Inter;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 769px) {
     padding: 1rem;
+    margin: 0;
   }
 `;
 
@@ -22,7 +23,7 @@ export const InnerContainer = styled.div`
   min-height: 95vh;
   background-color: #FFFFFF;
   margin: 2rem 0 0 0;
-  padding: 2.8rem 1rem;
+  padding: 4rem;
   border-radius: 25px;
 
   @media screen and (max-width: 912px) {

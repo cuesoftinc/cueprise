@@ -11,12 +11,12 @@ import {
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
   min-height: 100vh;
-  padding: 2rem;
+  margin: 1rem 0;
   overflow: hidden;
   width: 100%;
   font-family: Inter;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 768px) {
     padding: 1rem;
   }
 `;

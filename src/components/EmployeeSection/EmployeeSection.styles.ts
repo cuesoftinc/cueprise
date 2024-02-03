@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
   overflow: hidden;
-  margin: 2rem;
+  margin: 2rem 0;
   font-family: Inter;
 
   @media (max-width: 769px) {

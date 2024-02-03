@@ -60,11 +60,11 @@ const DownloadSection = () => {
           ref={imageRef}
         >
           <Image src={DownloadCueprise} alt="download image" />
+          <div className="mobile-badge">
+            <Image alt="App store badge" src={AppleBadge} />
+            <Image alt="Play store badge" src={GoogleBadge} />
+          </div>
         </motion.div>
-        <div className="mobile-badge">
-          <Image alt="App store badge" src={AppleBadge} />
-          <Image alt="Play store badge" src={GoogleBadge} />
-        </div>
       </DownloadContent>
     </DownloadContainer>
   );
