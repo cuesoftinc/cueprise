@@ -105,7 +105,6 @@ export const CardContainer = styled.div`
   align-items: flex-start;
   gap: 0.5rem;
   border-radius: 0.75rem;
-  border: 0.5px solid ${styles.color.blue_300};
   background-color: ${styles.color.gray_50};
 `;
 

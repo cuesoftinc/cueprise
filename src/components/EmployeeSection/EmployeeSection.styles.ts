@@ -34,7 +34,7 @@ export const InnerContainer = styled.div`
 export const ContentWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 30rem;
+  gap: 15rem;
 
   @media (max-width: 769px) {
     display: block;
@@ -44,6 +44,7 @@ export const ContentWrapper = styled.div`
 export const LeftBar = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 1.5rem;
   font-family: "Inter" sans-serif;
   font-style: normal;
