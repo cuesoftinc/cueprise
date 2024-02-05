@@ -35,8 +35,8 @@ export const DownloadContainer = styled.div`
   }
 
   @media (max-width: 769px) {
-    margin: 4rem 1rem 1rem 1rem;
     padding: 2rem 0;
+    margin: 1.75rem;
 
     h1 {
       font-size: 14px;

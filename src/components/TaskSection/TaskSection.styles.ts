@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export const SectionContainer = styled.section`
   background-color: ${styles.color.gray_100};
   overflow: hidden;
-  margin: 2rem;
   font-family: Inter;
 
   @media (max-width: 769px) {
@@ -59,8 +58,13 @@ export const LeftBar = styled.div`
     line-height: 56.8px;
     font-weight: 700;
     margin-bottom: 1rem;
-    
+
+
     @media (max-width: 769px) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: 426px) {
       font-size: 20px;
       line-height: 24px;
     }
@@ -74,6 +78,11 @@ export const LeftBar = styled.div`
     max-width: 80%;
 
     @media (max-width: 769px) {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+
+    @media (max-width: 426px) {
       font-size: 16px;
       line-height: 24px;
       max-width: 100%;
@@ -99,7 +108,7 @@ export const BottomImage = styled.img`
   margin: 0 1rem;
   z-index: 5;
 
-  @media (max-width: 769px) {
+  @media (max-width: 426px) {
     width: 100%;
     height: auto;
   }
@@ -111,7 +120,7 @@ export const TopImage = styled(motion.img)`
   right: -1rem;
   z-index: 10;
 
-  @media (max-width: 769px) {
+  @media (max-width: 426px) {
     width: 80%;
   }
 `;

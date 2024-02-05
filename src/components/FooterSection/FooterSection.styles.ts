@@ -89,8 +89,16 @@ const WaitList = styled.div`
     }
 
     button {
-      padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+      padding: 0.5rem;
     }
+  }
+
+  @media (max-width: 376px) {
+    input {
+      padding: 0 1rem 0 0.5rem;
+      height: 2rem;
+    }
+
   }
 `;
 
