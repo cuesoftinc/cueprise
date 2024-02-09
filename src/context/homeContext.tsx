@@ -3,7 +3,9 @@
 import { HomeContextProps, HomeProviderProps } from "./types";
 import { createContext, useContext, useState } from "react";
 
-const HomeContext = createContext<HomeContextProps | undefined>(undefined);
+export const HomeContext = createContext<HomeContextProps | undefined>(
+  undefined,
+);
 
 export const HomeProvider = ({ children }: HomeProviderProps) => {
   const [isNavOpen, setIsNavOpen] = useState<boolean>(false);

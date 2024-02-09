@@ -16,15 +16,15 @@ import { PageWrapper } from "../PageWrapper/PageWrapper.styles";
 const index = () => {
   return (
     <PageWrapper>
-      <SectionContainer>
+      <SectionContainer data-testid="management-section">
         <InnerContainer>
           <ContentWrapper>
             <LeftBar>
               <h1>Manage All Your Goods and Inventories </h1>
               <p>
                 Simplify your inventory tasks with our intuitive management
-                system, effortlessly organizing and tracking all your goods for a
-                more streamlined and efficient business operation
+                system, effortlessly organizing and tracking all your goods for
+                a more streamlined and efficient business operation
               </p>
             </LeftBar>
             <RightBar>
