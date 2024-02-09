@@ -10,7 +10,7 @@ import TeamSection from "../components/TeamSection";
 
 export default function Home() {
   return (
-    <main data-testid="temp" style={{ backgroundColor: "#F3F4F6" }}>
+    <main style={{ backgroundColor: "#F3F4F6" }}>
       <HeroSection />
       <Features />
       <Management />

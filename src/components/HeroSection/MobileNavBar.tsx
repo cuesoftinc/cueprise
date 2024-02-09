@@ -18,8 +18,8 @@ interface Props {
 
 const MobileNavBar = ({ setIsNavOpen }: Props) => {
   return (
-    <Container>
-      <MobileNavContainer data-testid="mobile-navbar">
+    <Container data-testid="mobile_navbar">
+      <MobileNavContainer>
         <Header>
           <Icon src="/logo.png" alt="Cueprise Logo" width={120} />
           <FaTimes onClick={() => setIsNavOpen(false)} className="close__nav" />

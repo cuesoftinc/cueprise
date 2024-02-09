@@ -17,7 +17,7 @@ import { PageWrapper } from "../PageWrapper/PageWrapper.styles";
 const index = () => {
   return (
     <PageWrapper>
-      <SectionContainer>
+      <SectionContainer data-testid="team-section">
         <InnerContainer>
           <CustomContentWrapper>
             <CustomRightBar>
@@ -34,8 +34,8 @@ const index = () => {
             <CustomLeftBar>
               <h1>Streamlined Team Organization</h1>
               <p>
-                Effortlessly organize, track, and optimize your entire team in one
-                centralized hub, ensuring smooth collaboration and increased
+                Effortlessly organize, track, and optimize your entire team in
+                one centralized hub, ensuring smooth collaboration and increased
                 productivity
               </p>
             </CustomLeftBar>

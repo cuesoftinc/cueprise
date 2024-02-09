@@ -32,7 +32,7 @@ const HeroSection = () => {
 
   return (
     <SectionWrapper data-testid="hero-section">
-      <NavBar>
+      <NavBar data-testid="desktop_navbar">
         <Logo src="/logo.png" alt="company logo" />
         <NavLinks>
           {links.map((link) => (
@@ -43,7 +43,11 @@ const HeroSection = () => {
         </NavLinks>
         <NavButton>Try For Free</NavButton>
         {!isNavOpen && (
-          <FaBars className="open__nav" onClick={() => setIsNavOpen(true)} />
+          <FaBars
+            className="open__nav"
+            onClick={() => setIsNavOpen(true)}
+            data-testid="nav_icon"
+          />
         )}
       </NavBar>
       <HeroContainer>
