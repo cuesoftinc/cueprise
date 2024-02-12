@@ -21,9 +21,9 @@ export const InnerContainer = styled.div`
   width: 100%;
   display: flex;
   min-height: 95vh;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 2rem 0 0 0;
-  padding: 4rem;
+  padding: 1rem;
   border-radius: 25px;
 
   @media screen and (max-width: 912px) {
@@ -115,7 +115,8 @@ export const BottomImage = styled.img`
   z-index: 5;
 
   @media screen and (max-width: 912px) {
-    width: fit-content;
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -129,6 +130,10 @@ export const TopImage = styled(motion.img)`
     width: 98%;
     top: 25%;
     left: 0.5rem;
+  }
+
+  @media (max-width: 426px) {
+    width: 80%;
   }
 `;
 

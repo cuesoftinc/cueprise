@@ -26,7 +26,7 @@ export const InnerContainer = styled.div`
   width: 100%;
   display: flex;
   min-height: 95vh;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin: 2rem 0 0 0;
   padding: 2.8rem 0;
   border-radius: 25px;
@@ -34,6 +34,10 @@ export const InnerContainer = styled.div`
   @media screen and (max-width: 912px) {
     margin: 0.5rem 0 0 0;
   }
+
+  /* @media screen and (max-width: 640px) {
+    padding: 2rem;
+  } */
 `;
 
 export const CustomContentWrapper = styled(ContentWrapper)`
@@ -69,7 +73,7 @@ export const CustomLeftBar = styled(LeftBar)`
   }
 
   @media screen and (max-width: 640px) {
-    padding: 0 2rem;
+    padding: 0 1rem;
 
     h1 {
       font-size: 6vw;
