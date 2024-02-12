@@ -53,6 +53,10 @@ export const Feedback = styled(motion.div)`
   display: flex;
   gap: 3rem;
 
+  img {
+    border-radius: 25px;
+  }
+
   .rating {
     margin-top: 1rem;
   }
