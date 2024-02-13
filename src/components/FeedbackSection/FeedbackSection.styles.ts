@@ -6,7 +6,6 @@ export const FeedbackContainer = styled.div`
   font-family: Inter;
   margin: 2rem 2rem 0 2rem;
   padding: 4rem 1rem;
-  font-family: Inter;
 
   h1 {
     background-color: #62BAAC;
@@ -50,27 +49,41 @@ export const FeedbackContent = styled.div`
 `
 
 export const Feedback = styled(motion.div)`
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 3rem;
 
+  img {
+    border-radius: 25px;
+  }
+
   .rating {
+    display: flex;
+    flex-direction: column;
     margin-top: 1rem;
   }
 
+  .text {
+    min-width: 0;
+  }
+
   h3 {
-    margin: 3rem 0;
+    margin: 1.5rem 0;
     font-weight: 500;
     font-size: 16px;
-    max-width: 80%;
+    display: flex;
+    align-items: center;
   }
 
   .user-detail {
     display: flex;
     gap: 1rem;
+    margin-top: auto;
+    margin-bottom: .5rem;
   }
 
   .user-detail > p:last-child {
-    color: ${styles.color.blue_gray_500}
+    color: ${styles.color.blue_gray_500};
   }
 
   p {
@@ -81,9 +94,8 @@ export const Feedback = styled(motion.div)`
   @media (max-width: 769px) {
     display: block;
 
-    p {
-      margin-right: auto;
-      margin-left: auto;
+    img {
+      margin: 0 auto; /* Center image */
     }
 
     h3 {
