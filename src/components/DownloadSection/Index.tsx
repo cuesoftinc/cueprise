@@ -1,12 +1,15 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { DownloadContainer, DownloadStore } from "./DownloadSection.styles";
+import { DownloadContainer, DownloadStore, PCDownload } from "./DownloadSection.styles";
 import { DownloadContent } from "./DownloadSection.styles";
 import Image from "next/image";
 import DownloadCueprise from "@/assets/images/downloadCueprise.png";
 import AppleBadge from "@/assets/images/AppStore.png";
 import GoogleBadge from "@/assets/images/GoogleStore.png";
+import SnapCraft  from "@/assets/icons/snapcraft_icon.png";
+import Windows from "@/assets/icons/microsoft_logo_icon.png";
+import Apple from "@/assets/icons/apple_appstore_icon.png";
 import { motion, useAnimation } from "framer-motion";
 
 const DownloadSection = () => {
@@ -39,6 +42,33 @@ const DownloadSection = () => {
       <h1 className="title">Download</h1>
       <h2>Get Cueprise</h2>
 
+      <PCDownload>
+        <h3>Download Cueprise For PC</h3>
+        <div className="card-container">
+          <div className="card">
+            <Image src={Apple} alt="Apple Store icon" />
+            <p>Cueprise for</p>
+            <h4>Mac</h4>
+            <p>Support Intel and Apple chips Perfectly compatible with macOS</p>
+            <button><a href="">Free Download</a></button>
+          </div>
+          <div className="card">
+            <Image src={SnapCraft} alt="SnapCraft Store icon" />
+            <p>Cueprise for</p>
+            <h4>Snapcraft</h4>
+            <p>The only office suite that supports Linux</p>
+            <button><a href="https://snapcraft.io/cueprise">Free Download</a></button>
+          </div>
+          <div className="card">
+            <Image src={Windows} alt="Windows Store icon" />
+            <p>Cueprise for</p>
+            <h4>Windows</h4>
+            <p>Lightweight, low memory usage and easy to download</p>
+            <button><a href="">Free Download</a></button>
+          </div>
+        </div>
+      </PCDownload>
+
       <DownloadContent>
         <div className="text">
           <h3>Download Cueprise For Mobile</h3>
@@ -61,8 +91,12 @@ const DownloadSection = () => {
         >
           <Image src={DownloadCueprise} alt="download image" />
           <div className="mobile-badge">
-            <Image alt="App store badge" src={AppleBadge} />
-            <Image alt="Play store badge" src={GoogleBadge} />
+            <a href="">
+              <Image alt="App store badge" src={AppleBadge} />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=io.cuesoft.cueprise">
+              <Image alt="Play store badge" src={GoogleBadge} />
+            </a>
           </div>
         </motion.div>
       </DownloadContent>

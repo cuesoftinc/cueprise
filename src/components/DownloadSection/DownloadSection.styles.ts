@@ -47,6 +47,60 @@ export const DownloadContainer = styled.div`
     }
   }
 `
+
+export const PCDownload = styled.div`
+  margin: 2rem 0;
+
+  h3 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem;
+    margin: 4rem 4rem;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+
+    h4{
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 1rem 0 0 0;
+    }
+
+    a{
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    button {
+      background-color: black;
+      border-radius: 10px;
+      width: 100%;
+      padding: 1rem;
+      margin: 2rem 0 0 0;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 769px) {
+    display: none;
+  }
+`
+
 export const DownloadContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
