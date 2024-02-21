@@ -10,6 +10,8 @@ import GoogleBadge from "@/assets/images/GoogleStore.png";
 import SnapCraft  from "@/assets/icons/snapcraft_icon.png";
 import Windows from "@/assets/icons/microsoft_logo_icon.png";
 import Apple from "@/assets/icons/apple_appstore_icon.png";
+import Ios from "@/assets/icons/ios_icon.png";
+import Android from "@/assets/icons/android_icon.png";
 import { motion, useAnimation } from "framer-motion";
 
 const DownloadSection = () => {
@@ -67,6 +69,28 @@ const DownloadSection = () => {
             <button><a href="">Free Download</a></button>
           </div>
         </div>
+
+        <h3>Download Cueprise For Mobile</h3>
+        <div className="mobile-card">
+          <div className="card">
+            <Image src={Android} alt="Android icon" />
+            <p>Cueprise for</p>
+            <h4>Andoid</h4>
+            <p>Google play Best of 2015</p>
+            <a href="">
+              <Image alt="Play store badge" src={GoogleBadge} />
+            </a>
+          </div>
+          <div className="card">
+            <Image src={Ios} alt="Apple icon" />
+            <p>Cueprise for</p>
+            <h4>ios</h4>
+            <p>App store Best of 2015</p>
+            <a href="https://snapcraft.io/cueprise">
+              <Image alt="App store badge" src={AppleBadge} />
+            </a>
+          </div>
+        </div> 
       </PCDownload>
 
       <DownloadContent>
