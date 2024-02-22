@@ -6,7 +6,6 @@ import TaskSection from "@/components/TaskSection/Index";
 import Features from "../components/Features";
 import Management from "../components/Management";
 import TeamSection from "../components/TeamSection";
-// import MobileNavBar from "@/components/HeroSection/MobileNavBar";
 
 export default function Home() {
   return (

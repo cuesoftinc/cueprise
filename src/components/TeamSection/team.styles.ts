@@ -34,10 +34,6 @@ export const InnerContainer = styled.div`
   @media screen and (max-width: 912px) {
     margin: 0.5rem 0 0 0;
   }
-
-  /* @media screen and (max-width: 640px) {
-    padding: 2rem;
-  } */
 `;
 
 export const CustomContentWrapper = styled(ContentWrapper)`
@@ -50,6 +46,16 @@ export const CustomContentWrapper = styled(ContentWrapper)`
 
 export const CustomLeftBar = styled(LeftBar)`
   width: 48%;
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 3.5rem;
+      line-height: normal;
+    }
+    p {
+      font-size: 1.15rem;
+    }
+  }
 
   @media screen and (max-width: 912px) {
     width: 100%;
@@ -66,7 +72,6 @@ export const CustomLeftBar = styled(LeftBar)`
     h1 {
       font-size: 2.5rem;
     }
-
     p {
       font-size: 1rem;
     }
@@ -78,7 +83,6 @@ export const CustomLeftBar = styled(LeftBar)`
     h1 {
       font-size: 6vw;
     }
-
     p {
       font-size: 0.875rem;
     }
@@ -97,8 +101,11 @@ export const CustomTopImage = styled(TopImage)`
   top: 20%;
   left: 5%;
 
+  @media screen and (max-width: 1024px) {
+    width: 85%;
+  }
+
   @media screen and (max-width: 912px) {
-    width: 98%;
     top: 35%;
     left: 0.5rem;
   }

@@ -64,6 +64,16 @@ export const LeftBar = styled.div`
     line-height: normal;
   }
 
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 3.5rem;
+      line-height: normal;
+    }
+    p {
+      font-size: 1.15rem;
+    }
+  }
+
   @media screen and (max-width: 912px) {
     width: 100%;
     padding: 0 2rem;
@@ -79,7 +89,6 @@ export const LeftBar = styled.div`
     h1 {
       font-size: 2.5rem;
     }
-
     p {
       font-size: 1rem;
     }
@@ -91,7 +100,6 @@ export const LeftBar = styled.div`
     h1 {
       font-size: 6vw;
     }
-
     p {
       font-size: 0.875rem;
     }
@@ -126,8 +134,12 @@ export const TopImage = styled(motion.img)`
   left: -1rem;
   z-index: 10;
 
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    left: 0;
+  }
+
   @media screen and (max-width: 912px) {
-    width: 98%;
     top: 25%;
     left: 0.5rem;
   }
