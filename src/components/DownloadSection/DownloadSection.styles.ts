@@ -104,13 +104,14 @@ export const PCDownload = styled.div`
     }
 
     button {
-      background-color: black;
+      background-color: #3A3A3A;
       border-radius: 10px;
       width: 100%;
       padding: 1rem;
       margin: 2rem 0 0 0;
       text-decoration: none;
       cursor: pointer;
+      border: 0;
     }
   }
 

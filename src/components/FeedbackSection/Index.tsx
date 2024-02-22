@@ -41,7 +41,7 @@ const FeedbackSection = () => {
           whileInView="show"
         >
           <div>
-            <Image src={user1} alt='' width={250} height={250}/>
+            <Image src={user1} alt=''/>
           </div>
           <div className='rating'>
             <div className='text'>
@@ -64,7 +64,7 @@ const FeedbackSection = () => {
           whileInView="show"
         >
           <div>
-            <Image src={opeyemi} alt='' width={250} height={250} />
+            <Image src={opeyemi} alt='' />
           </div>
           <div className='rating'>
             <div className='text'>

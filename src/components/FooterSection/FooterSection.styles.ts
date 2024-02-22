@@ -56,8 +56,9 @@ const WaitList = styled.div`
     background-color: #ffffff;
     border: none;
     border-radius: 0 5px 5px 0;
-    padding: 1rem 3rem 1rem 1.5rem;
+    padding: 1rem 3rem;
     cursor: pointer;
+    text-align: center;
 
     &:hover {
       opacity: 0.8;
@@ -66,7 +67,7 @@ const WaitList = styled.div`
   button p {
     text-align: center;
     font-weight: 600;
-    font-size: 20;
+    font-size: 14px;
     color: ${styles.color.foundation};
   }
   @media (max-width: 769px) {
@@ -208,8 +209,7 @@ const LinkWrapper = styled.div`
 
   @media (max-width: 1024px) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 50%;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
   }
 
