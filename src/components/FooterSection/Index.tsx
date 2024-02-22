@@ -55,6 +55,11 @@ const FooterSection = () => {
   }, [formLoading, formError, formSuccess]);
 
   const handleSubmit = async () => {
+    if (email === "") {
+      setFormError("fill in the input!");
+      return;
+    }
+
     if (formLoading) return;
     setFormLoading(true);
 

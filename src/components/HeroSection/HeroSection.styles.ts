@@ -267,6 +267,7 @@ export const Container = styled.div`
   min-height: 100vh;
   width: 100vw;
   background-color: ${styles.color.gray_100};
+  font-family: "Manrope", sans-serif;
   display: none;
 
   @media screen and (max-width: 912px) {
