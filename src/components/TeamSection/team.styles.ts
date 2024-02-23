@@ -101,11 +101,12 @@ export const CustomTopImage = styled(TopImage)`
   top: 20%;
   left: 5%;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1280px) {
     width: 85%;
   }
 
   @media screen and (max-width: 912px) {
+    width: 98%;
     top: 35%;
     left: 0.5rem;
   }

@@ -143,10 +143,6 @@ export const TopImage = styled(motion.img)`
     top: 25%;
     left: 0.5rem;
   }
-
-  @media (max-width: 426px) {
-    width: 80%;
-  }
 `;
 
 export const OuterImage = styled.img`
