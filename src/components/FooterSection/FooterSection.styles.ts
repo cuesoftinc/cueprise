@@ -204,8 +204,8 @@ const Address = styled.div`
 
 const LinkWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  gap: 6rem;
 
   @media (max-width: 1024px) {
     display: grid;
