@@ -15,11 +15,10 @@ export const SectionContainer = styled.section`
 
 export const InnerContainer = styled.div`
   position: relative;
-  width: 100%px;
+  width: 100%;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  height: 95vh;
   background-color: #FFFFFF;
   padding: 4rem;
   border-radius: 25px;
@@ -136,9 +135,8 @@ export const TopImage = styled(motion.img)`
 
 export const OuterImage = styled.img`
   position: absolute;
-  top: 11%;
-  left: 24%;
-  bottom: 20%;
+  top: 1%;
+  left: 30%;
   z-index: 10;
   transform: scaleX(-1);
 

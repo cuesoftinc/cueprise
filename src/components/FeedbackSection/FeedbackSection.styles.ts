@@ -55,6 +55,13 @@ export const Feedback = styled(motion.div)`
 
   img {
     border-radius: 25px;
+    width: 250px;
+    height: 250px;
+
+    @media (max-width: 1024px) {
+      width: 200px;
+      height: 200px;
+    }
   }
 
   .rating {
@@ -73,6 +80,11 @@ export const Feedback = styled(motion.div)`
     font-size: 16px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1024px) {
+      font-size: 12px;
+      margin: .5rem 0;
+    }
   }
 
   .user-detail {
@@ -89,13 +101,17 @@ export const Feedback = styled(motion.div)`
   p {
     font-weight: 600;
     font-size: 16px;
+
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
   }
 
   @media (max-width: 769px) {
     display: block;
 
     img {
-      margin: 0 auto; /* Center image */
+      margin: 0 auto;
     }
 
     h3 {

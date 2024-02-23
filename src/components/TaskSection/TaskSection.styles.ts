@@ -17,7 +17,7 @@ export const InnerContainer = styled.div`
   width: 100%px;
   display: flex;
   align-items: center;
-  height: 95vh;
+  height: auto;
   background-color: #FFFFFF;
   padding: 4rem;
   border-radius: 25px;
@@ -105,7 +105,7 @@ export const RightBar = styled.div`
 
 export const BottomImage = styled.img`
   position: relative;
-  margin: 0 1rem;
+  margin: 3rem 1rem;
   z-index: 5;
 
   @media (max-width: 426px) {
@@ -116,7 +116,7 @@ export const BottomImage = styled.img`
 
 export const TopImage = styled(motion.img)`
   position: absolute;
-  top: -15%;
+  top: -2%;
   right: -1rem;
   z-index: 10;
 
