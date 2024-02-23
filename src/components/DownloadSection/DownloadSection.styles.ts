@@ -82,43 +82,50 @@ export const PCDownload = styled.div`
   }
 
   .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #ffffff;
     border-radius: 10px;
     padding: 2rem;
+    height: 100%;
 
-    h4{
-      font-size: 36px;
-      font-weight: 700;
+    p:last-of-type {
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+        font-size: 36px;
+        font-weight: 700;
     }
 
     p {
-      margin: 1rem 0 0 0;
-      color: #6A597A;
+        margin: 1rem 0 0 0;
+        color: #6A597A;
     }
 
-    a{
-      text-decoration: none;
-      color: #ffffff;
-      font-size: 20px;
-      font-weight: 700;
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+
+        img {
+          margin-top: auto;
+          width: 100%;
+          height: 70%;
+        }
     }
 
     button {
-      background-color: #3A3A3A;
-      border-radius: 10px;
-      width: 100%;
-      padding: 1rem;
-      margin: 2rem 0 0 0;
-      text-decoration: none;
-      cursor: pointer;
-      border: 0;
+        background-color: #3A3A3A;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-top: auto;
+        text-decoration: none;
+        cursor: pointer;
+        border: 0;
     }
-  }
-
-  .card a img {
-    margin: 2rem 0 0 0;
-    width: 100%;
-    height: 25%;
   }
 
   @media (max-width: 769px) {
