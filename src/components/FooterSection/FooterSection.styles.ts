@@ -29,6 +29,11 @@ const WaitList = styled.div`
   padding: 3rem;
   color: #ffffff;
 
+  ::placeholder {
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+
   h1 {
     font-size: 32px;
     font-weight: 500;
@@ -46,7 +51,7 @@ const WaitList = styled.div`
   input {
     background-color: #4d3961;
     color: #ffffff;
-    border-radius: 5px 0 0 5px;
+    border-radius: 3px 0 0 3px;
     height: 3rem;
     border: none;
     padding: 0 5rem 0 1rem;
@@ -55,14 +60,10 @@ const WaitList = styled.div`
   button {
     background-color: #ffffff;
     border: none;
-    border-radius: 0 5px 5px 0;
-    padding: 1rem 3rem;
+    border-radius: 0 3px 3px 0;
+    padding: 1rem 1rem;
     cursor: pointer;
     text-align: center;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
   button p {
     text-align: center;
@@ -151,13 +152,11 @@ const LogoCards = styled.div`
 
   .footer__btn {
     background-color: #fcd54d;
-    color: #000;
     margin-inline: 0;
     border: none;
     font-weight: 600;
   }
   .footer__btn > a {
-    color: #000;
     text-decoration: none;
     padding: 10px 0 10px 20px;
   }
@@ -350,9 +349,8 @@ const BtnWrapper = styled.div`
   button {
     display: flex;
     align-items: center;
-    color: white;
     margin-inline: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 18px;
     cursor: pointer;
     background-color: inherit;
@@ -366,11 +364,12 @@ const BtnWrapper = styled.div`
 
   button a {
     display: block;
-    color: #fff;
+    color: #1C345B;
   }
 
   button span {
-    margin: 5px 0px 0px 5px;
+    margin: 5px 0px 0px 10px;
+    color: #1C345B;
   }
 
   @media (max-width: 769px) {
