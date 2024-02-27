@@ -57,7 +57,7 @@ const DownloadSection = () => {
           <div className="card">
             <Image src={SnapCraft} alt="SnapCraft Store icon" />
             <p>Cueprise for</p>
-            <h4>Snapcraft</h4>
+            <h4>Linux</h4>
             <p>The only office suite that supports Linux</p>
             <button><a href="https://snapcraft.io/cueprise">Free Download</a></button>
           </div>
@@ -77,7 +77,7 @@ const DownloadSection = () => {
             <p>Cueprise for</p>
             <h4>Andoid</h4>
             <p>Google play Best of 2015</p>
-            <a href="">
+            <a href="https://play.google.com/store/apps/details?id=io.cuesoft.cueprise">
               <Image alt="Play store badge" src={GoogleBadge} />
             </a>
           </div>
@@ -86,7 +86,7 @@ const DownloadSection = () => {
             <p>Cueprise for</p>
             <h4>ios</h4>
             <p>App store Best of 2015</p>
-            <a href="https://snapcraft.io/cueprise">
+            <a href="">
               <Image alt="App store badge" src={AppleBadge} />
             </a>
           </div>
