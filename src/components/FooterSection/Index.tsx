@@ -106,12 +106,12 @@ const FooterSection = () => {
           <div>
             <input
               type="email"
-              placeholder="Your email address"
+              placeholder="Your Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <button onClick={handleSubmit}>
-              {formLoading ? <Spinner /> : <p>Subscribe</p>}
+              {formLoading ? <Spinner /> : <p>Join waitlist</p>}
             </button>
           </div>
           <p style={{ color: "red" }}>{formError}</p>
