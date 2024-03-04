@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import styles from "@/styles/general.styles"
+import styles from "@/styles/general.styles";
 import { motion } from "framer-motion";
 
 export const FeedbackContainer = styled.div`
@@ -8,13 +8,17 @@ export const FeedbackContainer = styled.div`
   padding: 4rem 1rem;
 
   h1 {
-    background-color: #62BAAC;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  span {
+    background-color: #62baac;
     padding: 0.5rem;
     border-radius: 2rem;
     margin: 0 auto;
     text-align: center;
-    font-size: 16px;
-    font-weight: 600px;
     width: 104px;
   }
 
@@ -33,7 +37,7 @@ export const FeedbackContainer = styled.div`
       font-size: 14px;
     }
   }
-`
+`;
 export const FeedbackContent = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -46,7 +50,7 @@ export const FeedbackContent = styled.div`
     margin-top: 2rem;
     text-align: center;
   }
-`
+`;
 
 export const Feedback = styled(motion.div)`
   display: grid;
@@ -57,6 +61,7 @@ export const Feedback = styled(motion.div)`
     border-radius: 25px;
     width: 250px;
     height: 250px;
+    object-fit: cover;
 
     @media (max-width: 1024px) {
       width: 200px;
@@ -83,7 +88,7 @@ export const Feedback = styled(motion.div)`
 
     @media (max-width: 1024px) {
       font-size: 12px;
-      margin: .5rem 0;
+      margin: 0.5rem 0;
     }
   }
 
@@ -91,7 +96,7 @@ export const Feedback = styled(motion.div)`
     display: flex;
     gap: 1rem;
     margin-top: auto;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   .user-detail > p:last-child {
@@ -126,4 +131,4 @@ export const Feedback = styled(motion.div)`
       margin: 0 0 3rem 0;
     }
   }
-`
+`;

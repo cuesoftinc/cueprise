@@ -53,9 +53,7 @@ const HeroSection = () => {
       <HeroContainer>
         <HeroText_Wrapper>
           <HeroButton>
-            <span>
-              <b>update</b>
-            </span>
+            <span>Update</span>
             <p>Task Management and Financial Management</p>
           </HeroButton>
           <Hero_HeaderText>

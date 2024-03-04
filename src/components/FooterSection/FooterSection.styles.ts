@@ -30,7 +30,7 @@ const WaitList = styled.div`
   color: #ffffff;
 
   ::placeholder {
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 500;
   }
 
@@ -64,11 +64,11 @@ const WaitList = styled.div`
     padding: 1rem 1rem;
     cursor: pointer;
     text-align: center;
+    height: 3rem;
   }
   button p {
     text-align: center;
     font-weight: 600;
-    font-size: 14px;
     color: ${styles.color.foundation};
   }
   @media (max-width: 769px) {
@@ -100,7 +100,6 @@ const WaitList = styled.div`
       padding: 0 1rem 0 0.5rem;
       height: 2rem;
     }
-
   }
 `;
 
@@ -364,12 +363,12 @@ const BtnWrapper = styled.div`
 
   button a {
     display: block;
-    color: #1C345B;
+    color: #1c345b;
   }
 
   button span {
     margin: 5px 0px 0px 10px;
-    color: #1C345B;
+    color: #1c345b;
   }
 
   @media (max-width: 769px) {

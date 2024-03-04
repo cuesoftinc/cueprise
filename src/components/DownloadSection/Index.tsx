@@ -1,13 +1,17 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { DownloadContainer, DownloadStore, PCDownload } from "./DownloadSection.styles";
+import {
+  DownloadContainer,
+  DownloadStore,
+  PCDownload,
+} from "./DownloadSection.styles";
 import { DownloadContent } from "./DownloadSection.styles";
 import Image from "next/image";
 import DownloadCueprise from "@/assets/images/downloadCueprise.png";
 import AppleBadge from "@/assets/images/AppStore.png";
 import GoogleBadge from "@/assets/images/GoogleStore.png";
-import SnapCraft  from "@/assets/icons/snapcraft_icon.png";
+import SnapCraft from "@/assets/icons/snapcraft_icon.png";
 import Windows from "@/assets/icons/microsoft_logo_icon.png";
 import Apple from "@/assets/icons/apple_appstore_icon.png";
 import Ios from "@/assets/icons/ios_icon.png";
@@ -41,7 +45,9 @@ const DownloadSection = () => {
 
   return (
     <DownloadContainer id="Downloads">
-      <h1 className="title">Download</h1>
+      <h1 className="title">
+        <span> Download </span>
+      </h1>
       <h2>Get Cueprise</h2>
 
       <PCDownload>
@@ -52,21 +58,27 @@ const DownloadSection = () => {
             <p>Cueprise for</p>
             <h4>Mac</h4>
             <p>Support Intel and Apple chips Perfectly compatible with macOS</p>
-            <button><a href="">Free Download</a></button>
+            <button>
+              <a href="">Free Download</a>
+            </button>
           </div>
           <div className="card">
             <Image src={SnapCraft} alt="SnapCraft Store icon" />
             <p>Cueprise for</p>
             <h4>Linux</h4>
             <p>The only office suite that supports Linux</p>
-            <button><a href="https://snapcraft.io/cueprise">Free Download</a></button>
+            <button>
+              <a href="https://snapcraft.io/cueprise">Free Download</a>
+            </button>
           </div>
           <div className="card">
             <Image src={Windows} alt="Windows Store icon" />
             <p>Cueprise for</p>
             <h4>Windows</h4>
             <p>Lightweight, low memory usage and easy to download</p>
-            <button><a href="">Free Download</a></button>
+            <button>
+              <a href="">Free Download</a>
+            </button>
           </div>
         </div>
 
@@ -90,7 +102,7 @@ const DownloadSection = () => {
               <Image alt="App store badge" src={AppleBadge} />
             </a>
           </div>
-        </div> 
+        </div>
       </PCDownload>
 
       <DownloadContent>
