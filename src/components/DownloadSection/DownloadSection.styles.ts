@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
-import styles from "@/styles/general.styles"
+import styles from "@/styles/general.styles";
 
 export const DownloadContainer = styled.div`
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   font-family: Inter;
 
   background-image: url("/downloadVector.png");
@@ -17,13 +17,17 @@ export const DownloadContainer = styled.div`
   font-family: Inter;
 
   h1 {
-    background-color: #62BAAC;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  span {
+    background-color: #62baac;
     padding: 0.5rem;
     border-radius: 2rem;
     margin: 0 auto;
     text-align: center;
-    font-size: 16px;
-    font-weight: 600px;
     width: 104px;
   }
 
@@ -46,7 +50,7 @@ export const DownloadContainer = styled.div`
       font-size: 20px;
     }
   }
-`
+`;
 
 export const PCDownload = styled.div`
   margin: 2rem 0;
@@ -95,43 +99,43 @@ export const PCDownload = styled.div`
     }
 
     h4 {
-        font-size: 36px;
-        font-weight: 700;
+      font-size: 36px;
+      font-weight: 700;
     }
 
     p {
-        margin: 1rem 0 0 0;
-        color: #6A597A;
+      margin: 1rem 0 0 0;
+      color: #6a597a;
     }
 
     a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: 700;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
 
-        img {
-          margin-top: auto;
-          width: 100%;
-          height: 70%;
-        }
+      img {
+        margin-top: auto;
+        width: 100%;
+        height: 70%;
+      }
     }
 
     button {
-        background-color: #3A3A3A;
-        border-radius: 10px;
-        padding: 1rem;
-        margin-top: auto;
-        text-decoration: none;
-        cursor: pointer;
-        border: 0;
+      background-color: #3a3a3a;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: auto;
+      text-decoration: none;
+      cursor: pointer;
+      border: 0;
     }
   }
 
   @media (max-width: 769px) {
     display: none;
   }
-`
+`;
 
 export const DownloadContent = styled.div`
   display: none;
@@ -195,12 +199,11 @@ export const DownloadContent = styled.div`
         height: auto;
       }
     }
-`
+`;
 export const DownloadStore = styled.div`
   display: flex;
   gap: 2rem;
   margin-top: 4rem;
-  
 
   @media (max-width: 769px) {
     display: block;
@@ -209,4 +212,4 @@ export const DownloadStore = styled.div`
       display: none;
     }
   }
-`
+`;
