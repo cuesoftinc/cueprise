@@ -177,8 +177,8 @@ const FooterSection = () => {
                 <NavWrapper>
                   <NavLink href="tel:+1 302 359 6437">+1 302 359 6437</NavLink>
 
-                  <NavLink href="tel:+234 902 650 9478">
-                    +234 902 650 9478
+                  <NavLink href="tel:+234 916 771 2195">
+                    +234 916 771 2195
                   </NavLink>
 
                   <NavLink href="mailto:hello@cuesoft.io">
